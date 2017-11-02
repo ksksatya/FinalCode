@@ -1,0 +1,98 @@
+<div class="outer-scroll">
+  <ion-list no-lines *ngFor="let cp of upcomingProjectsList; let i=index">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-10 col-md-10>
+          <ion-card text-wrap [ngClass]="{active: isGroupShown(i)}" class="project-tab">
+            <div class="project-data-height">
+              <ion-grid>
+                <ion-row>
+                  <ion-col class="project-name" col-3 col-sm-3 col-md-3 (click)="setProjectToView(cp)"> {{cp.projectName}} </ion-col>
+                  <ion-col class="client-name" col-6 col-md-6> {{cp.clientName}} </ion-col>
+                  <ion-col class="start-end-date" col-3 col-sm-3 col-md-3> {{cp.startDate}} - {{cp.endDate}}</ion-col>
+                </ion-row>
+
+                <ion-row class="padding-row">
+                  <ion-col class="location-name" col-3 col-sm-3 col-md-3>
+                    {{cp.location}}
+                    <br> <span class="sites-count">{{cp.sitesCount}} Sites</span>
+                  </ion-col>
+                  <ion-col class="landscape-spacing" col-1 col-md-1> 
+                      <img src="assets/icon/FLM complete.png"> 
+                 </ion-col>
+                  <ion-col class="landscape-spacing" col-1 col-md-1> <img src="assets/icon/GWS complete.png"> </ion-col>
+                  <ion-col class="landscape-spacing icons-space-5" col-1 col-md-1> 
+                      <img src="assets/icon/SS complete.png"> 
+                    </ion-col>
+                  <ion-col class="landscape-spacing icons-space-10" col-1 col-md-1> 
+                      <img src="assets/icon/WD complete_1.png"> 
+                    </ion-col>
+                  <ion-col class="landscape-spacing icons-space-15" col-1 col-md-1> 
+                      <img src="assets/icon/WD complete_2.png"> 
+                    </ion-col>
+                  <ion-col  col-1 col-md-1> </ion-col>
+                  <ion-col col-1 col-md-1> </ion-col>
+                  <ion-col col-1 col-md-1 class="potrait-folder-icon">
+                    <ion-icon class="folder-icon" name="folder-open"></ion-icon>
+                  </ion-col>
+                  <ion-col col-1 col-md-1 class="potrait-dropdown-icon">
+                    <!--<ion-icon class="dropdown-icon" [name]="isGroupShown(i) ? 'arrow-up' : 'arrow-down'" (click)="toggleGroup(i)"></ion-icon>-->
+                    <ion-icon class="dropdown-icon" [name]="isGroupShown(i) ? 'remove-circle' : 'add-circle'" (click)="toggleGroup(i)" ></ion-icon>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+
+            <div *ngIf="isGroupShown(i)" class="list-container">
+              <ion-grid>
+                <ion-row *ngFor="let sd of cp.sitesData" class="site-data-row">
+                  <ion-col class="sites-location" col-3 col-sm-3 col-md-3>
+                    {{sd.siteName}}
+                    <br><span class="sites-coordinates">{{sd.Latitude}}, {{sd.Longitude}}</span>
+                  </ion-col>
+                  <ion-col class="landscape-spacing icons-space-neg-3" col-1 col-md-1> 
+                    <img src="assets/icon/FLM not complete.png" class="btn-tap" *ngIf="sd.groundwaterLevelMeasurement" 
+                    (click)="openSiteData(sd,cp.projectName,'fluidlevel')"> 
+                    <img src="assets/icon/FLM not available .png" *ngIf="!sd.groundwaterLevelMeasurement">
+                  </ion-col>
+                  <ion-col class="landscape-spacing icons-space-neg-3" col-1 col-md-1> 
+                    <img src="assets/icon/GWS not complete.png" class="btn-tap" *ngIf="sd.groundwaterSampling"
+                         (click)="openSiteData(sd,cp.projectName,'groundwater')">
+                    <img src="assets/icon/GWS not available .png" *ngIf="!sd.groundwaterSampling"> 
+                  </ion-col>
+                  <ion-col class="landscape-spacing icons-space-1" col-1 col-md-1> 
+                    <img src="assets/icon/SS not complete.png" class="btn-tap" *ngIf="sd.hydrocarbonSampling"
+                    (click)="openSiteData(sd,cp.projectName,'soil')"> 
+                    <img src="assets/icon/SS not available .png" *ngIf="!sd.hydrocarbonSampling">
+                  </ion-col>
+                  <ion-col class="landscape-spacing icons-space-6" col-1 col-md-1> 
+                    <img src="assets/icon/WD not complete_1.png" class="btn-tap" *ngIf="sd.soilSamples"
+                         (click)="openSiteData(sd,cp.projectName,'well')"> 
+                    <img src="assets/icon/WD not available _1.png" *ngIf="!sd.soilSamples">
+                  </ion-col>
+                  <ion-col class="landscape-spacing icons-space-10" col-1 col-md-1> 
+                    <img src="assets/icon/WD not complete_2.png" class="btn-tap" *ngIf="sd.waterpump"
+                    (click)="openSiteData(sd,cp.projectName,'wellcon')">
+                    <img src="assets/icon/WD not available _2.png" *ngIf="!sd.waterpump">
+                  </ion-col>
+                  <ion-col col-1 col-md-1> </ion-col>
+                  <ion-col col-1 col-md-1> </ion-col>
+                  <ion-col col-1 col-md-1> </ion-col>
+                  <ion-col col-1 col-md-1 class="check-circle-portrait-position">
+                    <ion-icon class="check-icon" name="checkmark-circle" *ngIf="sd.status"></ion-icon>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+          </ion-card>
+        </ion-col>
+        <ion-col col-2 col-md-2>
+          <div class="sync-icon" [ngClass] ='{"cloud-icon" : cp.projectCloud}' >
+            <ion-icon name="cloud-download"  *ngIf="cp.projectCloud"></ion-icon>
+            <ion-icon name="infinite" *ngIf="!cp.projectCloud"></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</div>

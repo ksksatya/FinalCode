@@ -1,0 +1,657 @@
+@media all and (orientation:landscape) {
+  soil-boring {
+        nav-bar{
+          .nav{
+              ion-list{
+                      background-color: black;
+              }
+          }
+      }
+    background-color: #f2f2f2;
+    .outer-scroll{
+      overflow-y:auto;
+    }
+    .well-reff-container {
+      width: 91.5vw;
+      float: right;
+
+      .project-header{
+        width: 91.5vw;
+        margin-bottom:1vw;
+        background-color: white;
+        ion-grid{    
+          padding: 0vw;
+          ion-row{
+            padding: 0vw;
+            height: 6.67vw;
+            .icons-col{
+              padding:1vw;
+            }
+            ion-col{
+              padding-top: 2.18vw; 
+
+              .project-title {
+                color: #007F71;
+                font-family: HelveticaNeue Medium;
+                font-size: 1.875vw;
+                padding-left: 2vw;
+              }
+              .activity-icons{
+                float: right;
+                padding-right: .833vw;
+                padding-left: .833vw;
+                width: 4.17vw;
+                height: 4.17vw;
+                border-radius: .52vw;
+                img{
+                  margin-top: .5vw;
+                  margin-left: .2vw;
+                  width: 2.5vw;
+                  height: 2.9vw;
+                }
+                .mid-icon{
+                  margin-left: .63vw;
+                }
+              }
+              .corner-icon{
+                margin-right: 1.04vw;
+              }
+              .selected-activity{
+                // background-color: #209CEA
+                border:.104vw solid black;
+              }
+            }
+               .back-page-button{
+                            box-shadow: 0.19vw 0vw 0.3125vw #e4e2e2;
+                            font-size: 2.08vw;
+                            text-align: center;
+                        }
+          }
+        }
+      }
+
+      .activity-input-container{
+        margin-left: 2.5vw;
+        height:87.73vh;
+        .keyboard-issue-row-height{
+          height: 12.5vw;
+        }
+        .top-heading{
+          padding-top:1.18vw!important;
+        }
+        .activity-heading{
+          font-size: 1.25vw;
+          font-family: HelveticaNeue Medium;
+          color: #000000;
+          padding-left: 1.56vw;
+          padding-top: 2.18vw;
+          padding-bottom: 1.04vw; 
+        }
+          .sample-color{
+              color:#007F71;
+          }
+        ion-grid{
+          padding: 0vw;
+          .expand-col{
+            max-width: 75vw;
+          }
+          .reduce-col{
+            max-width: 12.71vw;
+            left: 2.08vw;
+            .icons-photo{
+              background-color: #fff;
+              border-radius: 0.52vw;
+              height: 3.85vw;
+              width: 3.85vw;
+              padding: 1.04vw;
+              margin-left: -.104vw;
+            }
+          }
+          ion-col{
+            padding: 0vw;
+            .ground-level{
+              height:9.66vw;
+              max-height:9.66vw!important;
+            }
+            .ground-level-two{
+              height:20vw;
+            }
+            .ground-level-three{
+              height:10.83vw;
+                margin-bottom: 2.5vw;
+            }
+            ion-card{
+              margin: 0vw;
+              width: 75vw;
+              ion-card-content{
+                padding: 0vw;
+                    .samples-style{
+                        padding-left: 0vw;
+                    }
+                  .activity-card-content-list{
+                      padding-top:0.8vw!important;
+                  }
+                .activity-card-content{
+                  padding-left: 2.5vw; 
+                  padding-right: 2.3vw;
+                  padding-top: 1.2vw;
+                .dropdown-container-last{
+                    width:21.75vw!important;
+                    ion-select{
+                        font-size:1vw!important;
+                        top: .2vw!important;
+                        padding: 1.3vw .82vw 1.3vw .82vw ;
+                        select-text{
+                            font-size: 1.4vw;
+                            color: green;
+                        }
+                    }
+                }
+                  .dropdown-container{
+                    width:18.75vw;
+                    height: 10.41vw;
+                    float: left;
+                    ion-item{
+                      padding-left:0vw!important; 
+                    }
+                      .fix-label-ipad{
+                          width:30vw!important;
+                      }
+                    .dropdown-label{
+                      font-size:1.375vw;
+                      font-family: HelveticaNeue Regular;
+                      color: #4A4A4A;
+                    }
+                      .check-icon{
+                        margin-left: 1.875vw!important;
+                        color: #98BF40;
+                      }
+                    .dropdown-label-light{
+                      font-size: 1.375vw;
+                      font-family: HelveticaNeue Light;
+                      color: #6d6d6d;
+                    }
+                    ::-webkit-input-placeholder { 
+                        font-size: 1.375vw;
+                        font-family: HelveticaNeue Light;
+                        color: #008DD6;
+                    }
+                    ion-select{
+                      width:18.02vw;
+                      max-width: 100%;
+                      height: 3vw;
+                      border-bottom: .104vw solid #afadad;
+                      margin-top: 1.04vw;
+                      padding-top: 0vw;
+                      padding-bottom: 0vw;
+                      padding-left: .625vw;
+                      font-size: 2.08vw;
+                      font-family: HelveticaNeue Light;
+                      font-family: HelveticaNeue Light;
+                      color: #007F71;
+                    }
+                    .form-input{
+                      position: relative;
+                    }
+                      .form-input-ms-dropdown-value{
+                          width: 48%;
+                          display:inline-flex;
+                          bottom:.4vw;
+                      }
+                      .form-input-ms-dropdown{
+                          width: 48%;
+                          display:inline-flex;
+                          top: .6vw;
+                      }
+                    .unit {
+                          position: absolute;
+                            right: 0.5vw;
+                            top: 1.5vw;
+                            color: #9B9B9B;
+                            font-family: HelveticaNeue Light;
+                            font-size: 1.8vw;
+                    }
+                    .bottom-div{
+                        padding-left: 0.52vw;
+                        font-family: HelveticaNeue Regular;
+                        font-size: 1.14vw;
+                        padding-top: 0.52vw;
+                        color:  #9B9B9B;
+                        .avg-space{
+                            padding-left: 1.66vw;
+                        }
+                      }
+                    ion-input{
+                      border-bottom: .104vw solid #afadad;
+                      .text-input{
+                        font-size: 2.28vw;
+                        font-family: HelveticaNeue Light;
+                        color: #007F71;
+                        margin: .104vw 0.52vw 0.52vw 0.208vw;
+                      }                    
+                    }
+                    .padding-20{
+                      padding-top:2.08vw; 
+                    }
+                    .total-depth{
+                      border-bottom: .104vw solid #008DD6;
+                      .text-input{
+                        color: #008DD6;
+                      }
+                    }
+                  }
+                  .space-right{
+                    margin-right:5.83vw;
+                  }
+                }
+              }
+              
+            }
+          }
+        }
+         .btn-margin{
+                margin: 3.33vw 0vw;
+                .btn-outer{
+                    width:75vw;
+                    .save-btn{
+                      width:14vw;
+                      height: 5vw;
+                      left: .3vw;
+                      background-color: #008dd6;
+                      float:right;
+                      .button-inner{
+                        font-size: 1.65vw;
+                        font-family: helveticaNeue Light;
+                        color:#ffffff;
+                      }
+                    }
+                    
+                    .save-btn:active{
+                        background-color: grey;
+                    }
+                     .reset-btn{
+                      background-color: #f2f2f2;
+                      width:14vw;
+                      height:5vw;
+                      float:right;
+                      left: .3vw;
+                       .button-inner{
+                        font-size: 1.65vw;
+                        font-family: helveticaNeue Light;
+                        color:#008dd6;
+                      }
+                    }
+                    .reset-btn:active{
+                        .button-inner{
+                            font-size: 1.65vw;
+                            font-family: helveticaNeue Light;
+                            color:grey;
+                        }
+                    }
+                  }
+              }
+        // .reset-btn{
+        //   top: 3.5vw;
+        //   right: .9vw;
+        //   width: 10.18vw;
+        //   height: 3.75vw;
+        //   font-size: 1.25vw;
+        // }
+        //    .save-btn{
+        //        right: 3.5vw;
+        //        top:3.5vw;
+        //       width: 10.18vw;
+        //        height: 3.75vw;
+        //        font-size: 1.25vw;
+        //     }
+        // .bottom-ctls {
+        //   margin: 4.79vw 0vw 1.87vw 1.5vw;
+        //     .clock-icon{
+        //         font-size:1.375vw;
+        //     }
+        //   .date-and-time {
+        //     color: #4A4A4A;
+        //     font-size: 1.45vw;
+        //     font-family: HelveticaNeue Light;       
+        //   }
+        //   .hours{
+        //     font-size: 1.25vw;
+        //   }
+        // }
+
+      }
+    }
+    .color{
+        background-color: gainsboro;
+        
+      }
+    .shift-col-40{
+        left: 4.16vw;
+        }
+  }
+}
+
+@media all and (orientation:portrait) {
+  soil-boring {
+    background-color: #f2f2f2;
+    .outer-scroll{
+      overflow-y:auto;
+    }
+    .well-reff-container {
+      width: 88vw;;
+      float: right;
+
+      .project-header{
+        width: 88vw;
+        margin-bottom:1vw;
+        background-color: white;
+        ion-grid{    
+          padding: 0vw;
+          ion-row{
+            padding: 0vw;
+            height: 10vw;
+            .icons-col{
+              padding:1.66vw 1.66vw 1.66vw 0vw;
+            }
+            ion-col{
+              padding-top: 3.5vw; 
+              .project-title {
+                color: #007F71;
+                font-family: HelveticaNeue Medium;
+                font-size: 3vw;
+                padding-left: 2vw;
+              }
+              .activity-icons{
+                float: right;
+                padding-right: 1.16vw;
+                padding-left: 1.16vw;
+                width: 6.66vw;
+                height: 6.66vw;
+                border-radius: .83vw;
+                img{
+                  margin-top: .7vw;
+                  margin-left: .2vw;
+                  width: 4.34vw;
+                  height: 4.83vw;
+                }
+                .mid-icon{
+                  margin-left: .83vw;
+                }
+              }
+              .corner-icon{
+                margin-right: .66vw;
+              }
+              .first-icon{
+                margin-right: .33vw;
+              }
+              .selected-activity{
+                // background-color: #209CEA
+                border:.16vw solid black;
+              }
+            }
+            .back-page-button{
+              box-shadow: .16vw 0vw .5vw #e4e2e2;
+              text-align: center;
+              font-size: 3.33vw;
+            }
+//              .back-page-button{
+//                            box-shadow: 0.48vw 0vw 0.8vw #e4e2e2;
+//                            font-size: 4.5vw;
+//                            text-align: center;
+//                            padding: 2.56vw 0vw !important;
+//                        }
+          }
+        }
+      }
+
+      .activity-input-container{
+        margin-left: 2vw;
+        height:93vh;
+        .keyboard-issue-row-height{
+          height: 16vw;
+        }
+        .top-heading{
+          padding-top:2.5vw!important;
+        }
+        .activity-heading{
+          font-size: 2vw;
+          font-family: HelveticaNeue Medium;
+//          color: #000000;
+          padding-left: 2.5vw;
+          padding-top: 3.5vw;
+          padding-bottom: 1.66vw; 
+        }
+        ion-grid{
+          padding: 0vw;
+          .expand-col{
+            max-width: 71vw;
+          }
+          .reduce-col{
+            max-width: 12.5vw;
+            left: 1.5vw;
+            .align-video{
+              left: 0vw;
+              top: -.16vw;
+            }
+            .icons-photo{
+              background-color: #fff;
+              border-radius: 0.83vw;
+              height: 6.66vw;
+              width: 6.66vw;
+              padding: 1.66vw;
+              margin-left: -.16vw;
+            }
+          }
+          ion-col{
+            padding: 0vw;
+
+            .ground-level{
+                  width: 71vw;
+                  height: 31.3vw;
+            }
+              .ground-level-three{
+                 width: 71vw;
+                height: 31.3vw;
+            }
+            ion-card{
+              margin: 0vw;
+              width: 71vw;
+              ion-card-content{
+                padding: 0vw;
+                .activity-card-content{
+                  padding-left: 4vw; 
+                  padding-right:4vw;
+                  padding-top: 3vw; 
+                .dropdown-container-last{
+                    width:30vw!important;
+                    margin:0vw!important;
+                    ion-select{
+                        font-size:1vw!important;
+                        top: .2vw!important;
+                        padding: 2.16vw 1.33vw 2.16vw 1.33vw;
+                        select-text{
+                            font-size: 2vw;
+                            color: green;
+                        }
+                    }
+                }
+                  .dropdown-container{
+                    width:30vw;
+                    height: 14.16vw;
+                    float: left;
+                    ion-item{
+                      padding-left:0vw!important; 
+                    }
+                    .dropdown-label{
+                      font-size: 2.2vw;
+                      font-family: HelveticaNeue Regular;
+                      color: #4A4A4A;
+                    }
+                      .check-icon{
+                        margin-left: 3vw!important;
+                        color: #98BF40;
+                      }
+
+                    .dropdown-label-light{
+                      font-size: 2.2vw;
+                      font-family: HelveticaNeue Light;
+                      color: #6d6d6d;
+                    }
+                    ::-webkit-input-placeholder { 
+                        font-size: 3vw;
+                        font-family: HelveticaNeue Light;
+                        color: #008DD6;
+                    }
+                    ion-select{
+                      width:28.83vw;
+                      height: 5vw;
+                      max-width: 100%;
+                      border-bottom: .16vw solid #afadad;
+                      margin-top: .63vw;
+                      padding-top: 0vw;
+                      padding-bottom: 0vw;
+                      padding-left: 1vw;
+                      font-size: 3.66vw;
+                      font-family: HelveticaNeue Light;
+                      color: #007F71;
+
+                    }
+                    .form-input{
+                      position: relative;
+                    }
+                    .form-input-ms-dropdown-value{
+                          width: 48%;
+                          display:inline-flex;
+                      }
+                    .form-input-ms-dropdown{
+                          width: 48%;
+                          display:inline-flex;
+                          top: 1.4vw;
+                      }
+                    .unit {
+                          position: absolute;
+                            right: 1vw;
+                            top: 2vw;
+                            color: #9B9B9B;
+                            font-family: HelveticaNeue Light;
+                            font-size: 2.4vw;
+                    }
+                      .bottom-div{
+                        padding-left: 0.83vw;
+                        font-family: HelveticaNeue Regular;
+                        font-size: 2.2vw;
+                        padding-top: 0.83vw;
+                        color:  #9B9B9B;
+                        .avg-space{
+                            padding-left: 2.6vw;
+                        }
+                      }
+                    ion-input{
+                      border-bottom: .16vw solid #afadad;
+                      .text-input{
+                        font-size: 3vw;
+                        font-family: HelveticaNeue Light;
+                        color: #007F71;
+                        margin: .16vw 0.83vw 0.83vw 0.33vw;
+                      }                    
+                    }
+                    .total-depth{
+                      border-bottom: .16vw solid #008DD6;
+                      .text-input{
+                        color: #008DD6;
+                      }
+                    }
+                  }
+                  .space-right-potrait{
+                    margin-right:1.5vw;
+                  }
+                }
+              }
+              
+            }
+          }
+        }
+                .btn-margin{
+                    margin: 4vw 0vw;
+                    .btn-outer{
+                        width: 80vw;
+                        .save-btn{
+                            width: 18vw;
+                            height: 8vw;
+                            margin-right: 5vw;
+                            background-color: #008dd6;
+                            float: right;
+                            right: 3.7vw;
+                            .button-inner{
+                                font-size: 2.3vw;
+                                font-family: helveticaNeue Light;
+                                color:#ffffff;
+                            }
+                        }
+                       .reset-btn{
+                            background-color:#f2f2f2;
+                            width: 15vw;
+                            height: 8vw;
+                            float: right;
+                            right: 2vw;
+                        .button-inner{
+                                font-size: 2.3vw;
+                                font-family: helveticaNeue Light;
+                                color:#008dd6;
+                            }
+                        }
+                        .reset-btn:active{
+                       .button-inner{
+                                font-size: 2.3vw;
+                                font-family: helveticaNeue Light;
+                                color:gray;
+                            }
+                     }
+                    }
+                }
+        // .reset-btn{
+        //   top: 4.8vw;
+        //   right: 2.9vw;
+        //      width: 10.18vw;
+        //   height: 3.75vw;
+        //     font-size: 2.5vw;
+        // }
+        // .save-btn{
+        //        right: 6.4vw;
+        //        top:5vw;
+        //       width: 10.18vw;
+        //        height: 3.75vw;
+        //        font-size: 2vw;
+        //     }
+        // .bottom-ctls {
+        //   margin: 5.6vw 0vw 3vw 0vw;
+        //     .clock-icon{
+        //         font-size:2.2vw;
+        //     }
+        //   .date-and-time {
+        //     color: #4A4A4A;
+        //     font-size: 2.33vw;
+        //     font-family: HelveticaNeue Light;  
+        //   }
+        //   .hours{
+        //     font-size: 2.2vw;
+        //   }
+        // }
+       
+      }
+    }
+      .color{
+          background-color: gainsboro;
+              width: 71vw;
+              height: 31.3vw;
+      }
+      .shift-col-90{
+         left: 2.5vw;
+       
+       }
+       .shift-col-40{
+         left: 2vw;
+       }
+  }
+}
+

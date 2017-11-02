@@ -1,0 +1,34 @@
+
+<ion-grid>
+    <ion-row>
+        <ion-col col-md-1 col-sm-1 col-lg-1 col-xl-1>
+             <nav-bar></nav-bar>
+        </ion-col>
+        <ion-col col-md-11 col-sm-11 col-lg-11 col-xl-11>
+  <div class="projects-container">
+    <ion-grid class="tabs-grid">
+      <ion-row>
+        <div class="col-project-current" (click)="showProjectTab('Current Projects')" 
+        [class.tab-active]="projectType[0].show==true">
+          Current Projects &nbsp;&nbsp;
+        </div>
+        <div class="col-project" (click)="showProjectTab('Upcoming Projects')" 
+        [class.tab-active]="projectType[1].show==true">
+          |&nbsp;&nbsp;&nbsp;Upcoming Projects &nbsp;&nbsp;
+        </div>
+        <div class="col-project" (click)="showProjectTab('Completed Projects')" 
+        [class.tab-active]="projectType[2].show==true">
+          |&nbsp;&nbsp;&nbsp;Completed Projects
+        </div>
+      </ion-row>
+    </ion-grid> 
+
+    <div class="types-container">
+      <current-projects *ngIf="projectType[0].show"></current-projects>
+      <upcoming-projects *ngIf="projectType[1].show"></upcoming-projects>
+      <completed-projects *ngIf="projectType[2].show"></completed-projects>
+    </div>
+  </div>
+        </ion-col>
+        </ion-row>
+    </ion-grid>

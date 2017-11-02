@@ -1,0 +1,182 @@
+<ion-grid>
+    <ion-row>
+        <ion-col col-sm-1 col-md-1 col-xl-1>
+            <div class="nav-height">
+                <nav-bar [selectedUrl]="navBarTitle"></nav-bar>
+            </div>
+        </ion-col>
+
+        <ion-col col-sm-11 col-md-11 col-xl-11>
+            <div class="project-setup-container">
+                <div class="project-header">
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col class="back-page-button" col-1 col-sm-1 col-md-1 col-xl-1>
+                                <ion-icon name="arrow-back" (click)="goBackToDetails()"></ion-icon>
+                            </ion-col>
+
+                            <ion-col col-6 col-sm-6 col-md-6 col-xl-6>
+                                <div class="project-title">Project Setup</div>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </div>
+
+                <div class="project-setup-body outer-scroll">
+                    <form [formGroup]="projecctsetupForm2">
+                        <div class="activity-heading">PROJECT SETUP</div>
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col col-11 col-sm-11 col-md-11 col-xl-11>
+                                    <ion-card class="project-card-height">
+                                        <ion-card-content>
+                                            <div class="activity-card-content">
+                                                <div class="ps-inputs space-right space-right-portrait">
+                                                    <div class="input-label">Sample Location Id</div>
+                                                    <ion-item>
+                                                        <ion-select interface="popover" [(ngModel)]="locId" name="LocationId" formControlName="locId">
+                                                            <ion-option class="values" *ngFor="let locId of sampleLocationId" [value]="locId">{{locId}}</ion-option>
+                                                        </ion-select>
+                                                    </ion-item>
+                                                </div>
+
+                                                <div class="ps-inputs space-right">
+                                                    <div class="input-label">Latitude</div>
+                                                    <ion-input type="text" name="latitude" [(ngModel)]="latitude"  formControlName="latitude"></ion-input>
+                                                </div>
+
+                                                <div class="ps-inputs">
+                                                    <div class="input-label">Longitude</div>
+                                                    <ion-input type="text" name="longitude" [(ngModel)]="longitude"  formControlName="longitude"></ion-input>
+                                                </div>
+                                            </div>
+                                        </ion-card-content>
+                                    </ion-card>
+                                </ion-col>
+                            </ion-row>
+
+                            <div class="activity-heading">FLUID LEVEL- HISTORIC DATA 1</div>
+                            <ion-row>
+                                <ion-col col-11 col-sm-11 col-md-11 col-xl-11>
+                                    <ion-card class="project-card-height">
+                                        <ion-card-content>
+                                            <div class="activity-card-content">
+                                                <div class="ps-inputs space-right space-right-portrait">
+                                                    <div class="input-label">DTX_1 &lt;XXX.XXX&gt; </div>
+                                                    <ion-input type="text" name="dtx1" [(ngModel)]="dtx1"  formControlName="dtx1"></ion-input>
+                                                </div>
+
+                                                <div class="ps-inputs space-right">
+                                                    <div class="input-label">DTP_1 &lt;XXX.XXX&gt;</div>
+                                                    <ion-input type="text" name="dtx2" [(ngModel)]="dtx2"  formControlName="dtx2"></ion-input>
+                                                </div>
+
+                                                <div class="ps-inputs">
+                                                    <div class="input-label">TD_1 &lt;XXX.XXX&gt;</div>
+                                                    <ion-input type="text" name="dtx3" [(ngModel)]="dtx3"  formControlName="dtx3"></ion-input>
+                                                </div>
+                                            </div>
+                                        </ion-card-content>
+                                    </ion-card>
+                                </ion-col>
+                            </ion-row>
+
+
+                            <div class="activity-heading">FLUID LEVEL- HISTORIC DATA 2</div>
+                            <ion-row>
+                                <ion-col col-11 col-sm-11 col-md-11 col-xl-11>
+                                    <ion-card class="project-card-height">
+                                        <ion-card-content>
+                                            <div class="activity-card-content">
+                                                <div class="ps-inputs space-right space-right-portrait">
+                                                    <div class="input-label">DTX_2 &lt;XXX.XXX&gt; </div>
+                                                    <ion-input type="text" name="Dtx1" [(ngModel)]="Dtx1"  formControlName="Dtx1"></ion-input>
+                                                </div>
+
+                                                <div class="ps-inputs space-right">
+                                                    <div class="input-label">DTP_2 &lt;XXX.XXX&gt;</div>
+                                                    <ion-input type="text" name="Dtx2" [(ngModel)]="Dtx2"  formControlName="Dtx2"></ion-input>
+                                                </div>
+
+                                                <div class="ps-inputs">
+                                                    <div class="input-label">TD_2 &lt;XXX.XXX&gt;</div>
+                                                    <ion-input type="text" name="Dtx3" [(ngModel)]="Dtx3"  formControlName="Dtx3"></ion-input>
+                                                </div>
+                                            </div>
+                                        </ion-card-content>
+                                    </ion-card>
+                                </ion-col>
+                            </ion-row>
+
+                            <div class="activity-heading">GW SAMPLING</div>
+                            <ion-row>
+                                <ion-col col-11 col-sm-11 col-md-11 col-xl-11>
+                                    <ion-card class="project-card-height">
+                                        <ion-card-content>
+                                            <div class="activity-card-content">
+                                                <div class="ps-inputs space-right space-right-portrait">
+                                                    <div class="input-label">Hist_flow_rate &lt;XXX&gt; </div>
+                                                    <ion-input type="text" name="hisrate" [(ngModel)]="hisrate" formControlName="hisrate"></ion-input>
+                                                </div>
+
+                                                <div class="ps-inputs">
+                                                    <div class="input-label">Hist_intake_depth &lt;XXX.XXX&gt;</div>
+                                                    <ion-input type="text" name="hisdepth" [(ngModel)]="hisdepth" formControlName="hisdepth"></ion-input>
+                                                </div>
+                                            </div>
+                                        </ion-card-content>
+                                    </ion-card>
+                                </ion-col>
+                            </ion-row>
+
+                            <div class="activity-heading"></div>
+                            <ion-row>
+                                <ion-col col-11 col-sm-11 col-md-11 col-xl-11>
+                                    <ion-card class="project-card-height">
+                                        <ion-card-content>
+                                            <div class="activity-card-content">
+                                                <div class="ps-inputs space-right space-right-portrait">
+                                                    <div class="input-label">Fluid_Level</div>
+                                                    <ion-input type="text" name="fluidlevel" [(ngModel)]="fluidlevel" formControlName="fluidlevel"></ion-input>
+                                                </div>
+
+                                                <div class="ps-inputs space-right">
+                                                    <div class="input-label">GW_Sample</div>
+                                                    <ion-input type="text" name="groundwater" [(ngModel)]="groundwater" formControlName="groundwater"></ion-input>
+                                                </div>
+
+                                                <div class="ps-inputs space-right-portrait ps-top-margin-potrait">
+                                                    <div class="input-label">Boring_Well</div>
+                                                    <ion-input type="text" name="boringwell" [(ngModel)]="boringwell" formControlName="boringwell"></ion-input>
+                                                </div>
+
+                                                <div class="ps-inputs ps-top-margin space-right ps-top-margin-potrait">
+                                                    <div class="input-label">Well_Development</div>
+                                                    <ion-input type="text" name="well" [(ngModel)]="well" formControlName="well"></ion-input>
+                                                </div>
+
+                                                <div class="ps-inputs ps-top-margin space-right space-right-portrait ps-top-margin-potrait">
+                                                    <div class="input-label">Soil_Log</div>
+                                                    <ion-input type="text" name="soil" [(ngModel)]="soil" formControlName="soil"></ion-input>
+                                                </div>
+                                            </div>
+                                        </ion-card-content>
+                                    </ion-card>
+                                </ion-col>
+                            </ion-row>
+
+                            <ion-row>
+                                <ion-col col-11 col-md-11 col-sm-11 class="btn-margin">
+                                    <div class="btn-outer">
+                                        <button class="save-btn" ion-button (click)='save()'>SAVE</button>
+                                        <button ion-button type="reset" clear class="reset-btn">RESET</button>
+                                    </div>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </form>
+                </div>
+            </div>
+        </ion-col>
+    </ion-row>
+</ion-grid>

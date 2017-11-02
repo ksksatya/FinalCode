@@ -1,0 +1,573 @@
+@media all and (orientation:landscape) {
+  site-details {
+    background-color: #f2f2f2;
+     ion-grid{
+      padding: 0vw!important;
+      ion-col{
+        padding: 0vw!important;
+      }
+    }
+    .export-btn{
+      background-color: #f2f2f2;
+      width:6vw;
+      height:5.5vw;
+      float:left;
+      left: .4vw;
+        .button-inner{
+        font-size: 1.65vw;
+        font-family: helveticaNeue Light;
+        color:#008dd6;
+      }
+    }
+    .outer-scroll{
+      overflow-y:auto;
+    }
+    .site-details-container {
+      width: 91.4vw;
+      float: right;
+
+      .project-header{
+        width: 91.4vw;
+        margin-bottom:1vw;
+        background-color: white;
+        ion-grid{    
+          padding: 0vw;
+          ion-row{
+            padding: 0vw;
+            height: 6.67vw;
+            .icons-col{
+              padding:1.25vw!important;
+            }
+            ion-col{
+              padding-top: 2.14vw!important; 
+
+              .project-title {
+                color: #007F71;
+                font-family: HelveticaNeue Medium;
+                font-size: 1.87vw;
+                padding-left: 1.98vw;
+              }
+              .activity-icons{
+                float: right;
+                padding-right: .83vw;
+                padding-left: .83vw;
+                width: 4.16vw;
+                height: 4.16vw;
+                border-radius: .520vw;
+                img{
+                  margin-top: .5vw;
+                  margin-left: .2vw;
+                  width: 2.5vw;
+                  height: 2.9vw;
+                }
+                .mid-icon{
+                  margin-left: .625vw;
+                }
+              }
+              .corner-icon{
+                margin-right: 1.04vw;
+              }
+              .selected-activity{
+                // background-color: #209CEA
+                border:.104vw solid black;
+              }
+            }
+            .back-page-button{
+              box-shadow: .104vw 0vw .312vw #e4e2e2;
+              text-align: center;
+              font-size: 2.08vw;
+            }
+          }
+        }
+      }
+
+      .activity-input-container{
+        margin-left: 2.5vw;
+        height:87.73vh;
+        .keyboard-issue-row-height{
+          height: 12.5vw;
+        }
+        .top-heading{
+          padding-top:1.18vw!important;
+        }
+        .activity-heading{
+          font-size: 1.25vw;
+          font-family: HelveticaNeue Medium;
+          color: #000000;
+          padding-left: 1.56vw;
+          padding-top: 2.18vw;
+          padding-bottom: 1.04vw; 
+        }
+        ion-grid{
+          padding: 0vw;
+          // .last-row{
+          //   height: 18vw!important; //added for bottom button
+          .expand-col{
+            max-width: 75vw;
+              .textarea-card{
+                  textarea{
+                      font-size:1.56vw;
+                  }
+              }
+          }
+          .reduce-col{
+            max-width: 12.7vw;
+            left: 2.08vw;
+            .icons-photo{
+              background-color: #fff;
+              border-radius: .520vw;
+              height: 3.85vw;
+              width: 3.85vw;
+              padding: 1.04vw;
+              margin-left: -.104vw;
+            }
+          }
+          ion-col{
+            padding: 0vw;
+            .visual-level{
+              height: 32.5vw;
+            }
+            .ground-level{
+              height:10.8vw;
+            }
+            ion-card{
+              margin: 0vw;
+              width: 75vw;
+              ion-card-content{
+                padding: 0vw;
+                .activity-card-content{
+                  padding-left: 2.5vw;
+                  padding-top: 1.87vw; 
+                  .dropdown-container{
+                    width:18.75vw;
+                    height: 10.41vw;
+                    float: left;
+                    ion-item{
+                      padding-left:0vw!important; 
+                    }
+                    .dropdown-label{
+                      font-size: 1.45vw;
+                      font-family: HelveticaNeue Regular;
+                      color: #4A4A4A;
+                    }
+                    ::-webkit-input-placeholder { 
+                        font-size: 2.29vw;
+                        font-family: HelveticaNeue Light;
+                        color: #008DD6;
+                    }
+                    ion-select{
+                       width: 15.62vw;
+                        max-width: 100%;
+                        border-bottom: .104vw solid #afadad;
+                        font-size: 2.29vw;
+                        font-family: HelveticaNeue Light;
+                        color: #007F71;
+                        padding: 0vw!important;
+                        height: 4vw!important;
+                    }
+                    .form-input{
+                      position: relative;
+                    }
+                    .unit {
+                      position: absolute; 
+                          right: .8vw;
+                        top: 1.2vw;
+                      color: #9B9B9B;
+                      font-family: HelveticaNeue Light;
+                      font-size: 2vw;
+                    }
+                    ion-input{
+                      border-bottom: .104vw solid #afadad;
+                      .text-input{
+                        font-size: 2.29vw;
+                        font-family: HelveticaNeue Light;
+                        color: #007F71;
+                        margin: .104vw .520vw .520vw .208vw;
+                      }                    
+                    }
+                    .padding-20{
+                      padding-top:2.08vw; 
+                    }
+                    .total-depth{
+                      border-bottom: .104vw solid #008DD6;
+                      .text-input{
+                        color: #008DD6;
+                      }
+                    }
+                  }
+                  .space-right{
+                    margin-right:5.83vw;
+                  }
+                }
+              }
+              
+            }
+          }
+        }
+             .btn-margin{
+                margin: 3.33vw 0vw;
+                .btn-outer{
+                    width:75vw;
+                    .save-btn{
+                      width:14vw;
+                      height: 5vw;
+                      left: .3vw;
+                      background-color: #008dd6;
+                      float:right;
+                      .button-inner{
+                        font-size: 1.65vw;
+                        font-family: helveticaNeue Light;
+                        color:#ffffff;
+                      }
+                    }
+                    
+                    .save-btn:active{
+                       background-color: grey;
+                       }
+                    
+                      .reset-btn{
+                      background-color: #f2f2f2;
+                      width:15vw;
+                      height:5vw;
+                      float:right;
+                      left: .4vw;
+                       .button-inner{
+                        font-size: 1.65vw;
+                        font-family: helveticaNeue Light;
+                        color:#008dd6;
+                      }
+                    }
+                    .reset-btn:active{
+                        .button-inner{
+                            font-size: 1.65vw;
+                            font-family: helveticaNeue Light;
+                            color:grey;
+                        }
+                    }
+                  }
+              }
+        // .reset-btn{
+        //   top: 3.5vw;
+        //   right: .9vw;
+        //   width: 10.18vw;
+        //   height: 3.75vw;
+        //   font-size: 1.25vw;
+        // }
+        //    .save-btn{
+        //        right: 3.5vw;
+        //        top:3.5vw;
+        //       width: 10.18vw;
+        //        height: 3.75vw;
+        //        font-size: 1.25vw;
+        //     }
+        // .bottom-ctls {
+        //   margin: 4.79vw 0vw 1.87vw 1.5vw;
+        //     .clock-icon{
+        //         font-size:1.375vw;
+        //     }
+        //   .date-and-time {
+        //     color: #4A4A4A;
+        //     font-size: 1.4375vw;
+        //     font-family: HelveticaNeue Light;       
+        //   }
+        //   .hours{
+        //     font-size: 1.25vw;
+        //   }
+        // }
+        // .shift-col-40{
+        //   left: 4.16vw;
+        // }
+          .valid-msg{
+              color: red;
+              font-size:1.255vw;
+          }
+          .select-icon {
+            position: relative;
+            width: 2vw;
+            height: 4vw;
+            .select-icon-inner{
+                width: .7vw;
+                height: .7vw;
+            }
+        }
+      }
+    }
+  }
+}
+
+@media all and (orientation:portrait) {
+  site-details {
+     ion-grid{
+      padding: 0vw!important;
+      ion-col{
+        padding: 0vw!important;
+      }
+    }
+    .export-btn{
+          background-color: #f2f2f2;
+          width: 9vw;
+          height: 9vw;
+          float: left;
+          left: .4vw;
+        .button-inner{
+        font-size: 1.9vw;
+        font-family: helveticaNeue Light;
+        color:#008dd6;
+      }
+    }
+    background-color: #f2f2f2;
+    .outer-scroll{
+      overflow-y:auto;
+    }
+    .site-details-container {
+      width: 88vw;
+      float: right;
+
+      .project-header{
+        width: 88vw;
+        margin-bottom:1vw;
+        background-color: white;
+        ion-grid{    
+          padding: 0vw;
+          ion-row{
+            padding: 0vw;
+            height: 10vw;
+            .icons-col{
+              padding:1.66vw 1.66vw 1.66vw 0vw!important;
+            }
+            ion-col{
+              padding-top: 3.5vw!important; 
+              .project-title {
+                color: #007F71;
+                font-family: HelveticaNeue Medium;
+                font-size: 3vw;
+                padding-left: 2vw;
+              }
+              .activity-icons{
+                float: right;
+                padding-right: 1.16vw;
+                padding-left: 1.16vw;
+                width: 6.66vw;
+                height: 6.66vw;
+                border-radius: .83vw;
+                img{
+                  margin-top: .7vw;
+                  margin-left: .3vw;
+                  width: 4.34vw;
+                  height: 4.83vw;
+                }
+                .mid-icon{
+                  margin-left: .83vw;
+                }
+              }
+              .corner-icon{
+                margin-right: .66vw;
+              }
+              .first-icon{
+                margin-right: .33vw;
+              }
+              .selected-activity{
+                // background-color: #209CEA
+                border:.16vw solid black;
+              }
+            }
+            .back-page-button{
+              box-shadow: .16vw 0vw .5vw #e4e2e2;
+              text-align: center;
+              font-size: 3.33vw;
+            }
+          }
+        }
+      }
+
+      .activity-input-container{
+        margin-left: 2vw;
+        height:93vh;
+        .keyboard-issue-row-height{
+          height: 16vw;
+        }
+        .top-heading{
+          padding-top:2.5vw!important;
+        }
+        .activity-heading{
+          font-size: 2vw;
+          font-family: HelveticaNeue Medium;
+          color: #000000;
+          padding-left: 2.5vw;
+          padding-top: 3.5vw;
+          padding-bottom: 1.66vw; 
+        }
+        ion-grid{
+          padding: 0vw;
+          .expand-col{
+            max-width: 71vw;
+            .textarea-card{
+                  height:15vw;
+                  textarea{
+                      font-size:2.5vw;
+                  }
+              }
+          }
+          .reduce-col{
+            max-width: 12.5vw;
+            left: 1.5vw;
+            .align-video{
+              left: 0vw;
+              top: -.16vw;
+            }
+            .icons-photo{
+              background-color: #fff;
+              border-radius: .83vw;
+              height: 6.66vw;
+              width: 6.66vw;
+              padding: 1.66vw;
+              margin-left: -.16vw;
+            }
+          }
+          ion-col{
+            padding: 0vw;
+            .visual-level{
+              height: 73.66vw;;
+            }
+            .ground-level{
+              height:30vw;
+            }
+            ion-card{
+              margin: 0vw;
+              width: 71vw;
+              ion-card-content{
+                padding: 0vw;
+                .activity-card-content{
+                  padding-left: 4vw; 
+                  padding-top: 3vw; 
+                  .dropdown-container{
+                    width:30vw;
+                    height: 14.16vw;
+                    float: left;
+                    ion-item{
+                      padding-left:0vw!important; 
+                    }
+                    .dropdown-label{
+                      font-size: 2.33vw;
+                      font-family: HelveticaNeue Regular;
+                      color: #4A4A4A;
+                    }
+                    ::-webkit-input-placeholder { 
+                        font-size: 3.66vw;
+                        font-family: HelveticaNeue Light;
+                        color: #008DD6;
+                    }
+                    ion-select{
+                      width:25vw;
+                      max-width: 100%;
+                      border-bottom: .16vw solid #afadad;
+                      font-size: 3.66vw;
+                      font-family: HelveticaNeue Light;
+                      color: #007F71;
+                      padding: 0vw!important;
+                      height: 5vw!important;
+                    }
+                    .form-input{
+                      position: relative;
+                    }
+                    .unit {
+                          position: absolute;
+                            right: 1.5vw;
+                            top: 2vw;
+                            color: #9B9B9B;
+                            font-family: HelveticaNeue Light;
+                            font-size: 3vw;
+
+                    }
+                    ion-input{
+                      border-bottom: .16vw solid #afadad;
+                      .text-input{
+                        font-size: 3.66vw;
+                        font-family: HelveticaNeue Light;
+                        color: #007F71;
+                        margin: .16vw .83vw .83vw .33vw;
+                      }                    
+                    }
+                    .total-depth{
+                      border-bottom: .16vw solid #008DD6;
+                      .text-input{
+                        color: #008DD6;
+                      }
+                    }
+                  }
+                  .space-right-potrait{
+                    margin-right:4vw;
+                  }
+                }
+              }
+              
+            }
+          }
+        }
+        .date-and-time {
+            color: #4A4A4A;
+            font-size: 2.33vw;
+            font-family: HelveticaNeue Light;  
+          }
+        .hours{
+            font-size: 2.2vw;
+          }
+        }
+        .btn-margin{
+                    margin: 4vw 0vw;
+                    .btn-outer{
+                        width: 80vw;
+                        .save-btn{
+                            width: 18vw;
+                            height: 8vw;
+                            margin-right: 5vw;
+                            background-color: #008dd6;
+                            float: right;
+                            right: 3.7vw;
+                            .button-inner{
+                                font-size: 2.3vw;
+                                font-family: helveticaNeue Light;
+                                color:#ffffff;
+                            }
+                        }
+                         .save-btn:active{
+                       background-color: grey;
+                       }
+                       .reset-btn{
+                            background-color:#f2f2f2;
+                            width: 15vw;
+                            height: 8vw;
+                            float: right;
+                            right: 2vw;
+                        .button-inner{
+                                font-size: 2.3vw;
+                                font-family: helveticaNeue Light;
+                                color:#008dd6;
+                            }
+                        }
+                        .reset-btn:active{
+                       .button-inner{
+                                font-size: 2.3vw;
+                                font-family: helveticaNeue Light;
+                                color:gray;
+                            }
+                     }
+                    }
+                }
+         .valid-msg{
+                     color: red;
+                 font-size:2vw;
+            }
+           .select-icon {
+            position: relative;
+            width: 3vw;
+            height: 5vw;
+            .select-icon-inner{
+                width: 1vw;
+                height: 1vw;
+            }
+        }
+      }
+    }
+  }
+

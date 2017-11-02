@@ -1,0 +1,195 @@
+
+  <div class="nav-height">
+    <nav-bar></nav-bar>
+  </div>
+  <div class="well-reff-container">  
+    <div class="project-header">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="back-page-button" col-1 col-md-1>
+            <ion-icon name="arrow-back" (click)="goBackToDetails()"></ion-icon>
+          </ion-col>
+
+          <ion-col col-6 col-md-6>
+            <div class="project-title">{{projectName}} : {{siteData.siteName}}</div>
+          </ion-col>
+          <ion-col col-5 col-md-5 class="icons-col">
+            <div class="activity-icons corner-icon">
+                <img src="assets/icon/WD complete_2.png" *ngIf="siteData.waterpump"
+                (click)="headerNavigation('wellcon')"> 
+                <img src="assets/icon/WD not complete_2.png" *ngIf="!siteData.waterpump"> 
+            </div>
+            <div class="activity-icons ">
+                <img src="assets/icon/WD complete_1.png" *ngIf="siteData.soilSamples"
+                (click)="headerNavigation('well')"> 
+                <img src="assets/icon/WD not complete_1.png" *ngIf="!siteData.soilSamples"> 
+            </div>
+            <div class="activity-icons selected-activity">
+                <img src="assets/icon/SS complete.png" *ngIf="siteData.hydrocarbonSampling"> 
+                  <img src="assets/icon/SS not complete.png" *ngIf="!siteData.hydrocarbonSampling"> 
+            </div>
+            <div class="activity-icons">
+              <img src="assets/icon/GWS complete.png" *ngIf="siteData.groundwaterSampling"
+              (click)="headerNavigation('groundwater')">
+              <img src="assets/icon/GWS not complete.png" *ngIf="!siteData.groundwaterSampling">
+            </div>
+            <div class="activity-icons margin-right ">
+              <img src="assets/icon/FLM complete.png" *ngIf="siteData.groundwaterLevelMeasurement"
+              (click)="headerNavigation('fluidlevel')">
+              <img src="assets/icon/FLM not complete.png" *ngIf="!siteData.groundwaterLevelMeasurement">
+            </div>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="activity-input-container outer-scroll">
+      
+      <div class="activity-heading top-heading">WELL REFERENCE DATA</div>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-10 col-md-10 class="expand-col">
+            <!--cardList left-space-->
+            <ion-card class="color">                      
+              <ion-card-content>
+                <div class="activity-card-content">
+                  <div class="dropdown-container space-right space-right-potrait">
+                    <div class="dropdown-label">Boring/Well ID</div>
+                      <div class="form-input">
+                      <ion-input  type="tel" disabled="true" [(ngModel)]="boringWellId" ></ion-input>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-container space-right">
+                    <div class="dropdown-label">Latitude</div>
+                      <div class="form-input">
+                      <ion-input type="tel" maxlength="5" disabled="true" [(ngModel)]="latitude" ></ion-input>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-container space-right-potrait">
+                    <div class="dropdown-label fix-label-ipad">Longitude</div>
+                      <div class="form-input">
+                      <ion-input type="tel"  maxlength="6" disabled="true" [(ngModel)]="longitude"  ></ion-input>
+<!--                      <span class="unit">ft</span>-->
+                    </div>
+                  </div>
+                  <br>
+                  <div class="dropdown-container space-right-potrait">
+                    <div class="dropdown-label">Owner</div>
+                      <div class="form-input">
+                      <ion-input type="text" maxlength="4" disabled="true" [(ngModel)]="owner" ></ion-input>
+                    </div>
+                  </div>    
+                 </div>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+          
+          
+          <div class="activity-heading top-heading">Well Characteristics</div> 
+          <ion-row>
+            <ion-col col-10 col-md-10 class="expand-col">
+              <ion-card class="ground-level-three color">                      
+                <ion-card-content>
+                  <div class="activity-card-content input-container-height">
+                    <div class="dropdown-container space-right space-right-potrait">
+                      <div class="dropdown-label">Boring Diameter</div>
+                      <div class="form-input">
+                        <ion-input type="number" [(ngModel)]="boreDiameter" maxlength="5" disabled="true"></ion-input>
+                        <span class="unit">in</span> 
+                      </div>
+                    </div>
+
+                    <div class="dropdown-container space-right">
+                      <div class="dropdown-label">Surface Elevation</div>
+                      <div class="form-input">
+                        <ion-input type="number" [(ngModel)]="surfaceElevation"   maxlength="5" disabled="true"></ion-input>
+                        <span class="unit">ft</span>
+                      </div>
+                    </div>
+
+                      <div class="dropdown-container ">
+                      <div class="dropdown-label">Total Depth(DF)</div>
+                      <div class="form-input">
+                        <ion-input type="number" [(ngModel)]="totalDepth"  maxlength="6" disabled="true"></ion-input>
+                      </div>
+                    </div>
+                  </div>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+          <form [formGroup]="soilboreform">
+          <div class="activity-heading">Drilling Information</div>
+                <ion-row>
+                  <ion-col col-10 col-md-10 class="expand-col">
+                    <ion-card class="ground-level">                      
+                      <ion-card-content>
+                        <div class="activity-card-content input-container-height">
+                          <div class="dropdown-container space-right space-right-potrait">
+                            <div class="dropdown-label">Drilling Company</div>
+                            <div class="form-input">
+                              <ion-input type="text" [(ngModel)]="drillingCompany" formControlName="drillCompany"></ion-input>
+                            </div>
+                          </div>
+
+                          <div class="dropdown-container space-right">
+                            <div class="dropdown-label">Drilling Method</div>
+                            <div class="form-input">
+<!--                              <ion-select type="text" pattern="/^[0-9]{3}[.]{1}?[0-9]{3}$/i" [(ngModel)]="drillingMethod" formControlName="drillMethod" maxlength="7"></ion-select>-->
+                            <ion-item>
+                                <ion-select [(ngModel)]="drillingMethod" formControlName="drillMethod" interface="popover">
+                                    <ion-option *ngFor="let drillingMethod of drillingMethodList" class="values" selected="drillingMethod[0]">{{drillingMethod}}</ion-option>
+                                </ion-select>
+                            </ion-item>
+                            </div>
+                          </div>
+
+                            <div class="dropdown-container ">
+                            <div class="dropdown-label">Driller</div>
+                            <div class="form-input">
+                              <ion-input type="text" [(ngModel)]="driller"  formControlName="drillers" maxlength="7"></ion-input>
+                            </div>
+                          </div>
+                        </div>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-col>
+                </ion-row>
+              
+              
+              
+
+        <!--<ion-row class="keyboard-issue-row-height">
+          <ion-col class="bottom-ctls" col-5 col-md-5>
+<ion-icon class="clock-icon" ios="ios-time" md="md-time"></ion-icon>
+              <span class="date-and-time">&nbsp; {{currentDate | async | date:'H:mm'}}&nbsp;<span class="hours"></span> &nbsp;&nbsp;&nbsp; {{currentDate | async | date:'dd MMM y'}}</span>
+          </ion-col>
+
+          <ion-col col-1 col-md-1 offset-md-2 class="shift-col-40">
+            <button ion-button clear type="reset" class="reset-btn">RESET</button>
+          </ion-col>
+
+          <ion-col col-1 col-md-1 offset-md-1 class="shift-col-90">
+            <button class="save-btn" ion-button (click)="continueToSoilSamples()">CONTINUE</button>
+          </ion-col>
+      </ion-row>-->
+
+      <ion-row class="last-row">
+                  <ion-col col-11 col-md-11 col-sm-11 class="btn-margin" >
+                      <div class="btn-outer">
+                        
+                        <button class="save-btn" ion-button [disabled]="(soilboreform.invalid) || !(soilboreform.dirty)" (click)="continueToSoilSamples()">CONTINUE</button>
+                        <button ion-button clear type="reset" class="reset-btn">RESET</button>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </form>
+      </ion-grid>
+     
+    </div>
+  </div>
+ 

@@ -1,0 +1,13 @@
+<div class="nav">
+  <ion-list no-lines>
+    <img class="erm-image" src='assets/icon/Logo.svg'>
+   <!--<object type="image/svg+xml" class="erm-image" data="../assets/icon/Logo.svg">Your browser does not support SVGs</object>-->
+    <ion-item class="nav-buttons" *ngFor="let pg of pages" icon-left (click)="redirectToPage(pg.title); toggleActive(pg.title)">
+      <img class="side-bar-icon toggleActiveImage" [src]="pg.urlToDisplay"><br>
+      <!--<ion-badge item-right class="alert-badge" *ngIf="pg.title === 'Alerts'">3</ion-badge>-->
+      <span class="side-bar-icon-text">{{pg.title}}</span>
+    </ion-item>
+  </ion-list>
+  <!--<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>-->
+</div>
+

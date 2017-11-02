@@ -1,0 +1,27 @@
+<ion-content class="background">
+  <ion-card class="outer-box">
+    <ion-card-content>
+      <form #registerForm="ngForm">
+        <div class="item-outerbox">
+
+        <ion-item>
+          <ion-label floating>Username</ion-label>
+          <ion-input type="text" maxlength="25" name="username" [(ngModel)]="username"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Password</ion-label>
+          <ion-input type="password" maxlength="8" name="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+        
+        <div>
+          <ion-label class="signed-in">Keep Me Signed In</ion-label>
+          <ion-checkbox name="signedIn"></ion-checkbox>
+        </div>
+        </div>
+
+        <button ion-button full class="grey" (click)="login()">Sign In</button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

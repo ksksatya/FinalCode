@@ -1,0 +1,463 @@
+@media all and (orientation:landscape) {
+  project-setup {
+    ion-grid{
+      padding: 0vw!important;
+      ion-col{
+        padding: 0vw!important;
+      }
+    }
+    .outer-scroll{
+      overflow-y:auto;
+      height:87.73vh;
+      ion-grid{
+        padding: 0vw!important;
+        ion-col{
+          padding: 0vw!important;
+        }
+      }
+    }
+    .project-setup-container {
+      background-color: #f2f2f2;
+      width: 91.5vw;
+      float: right;
+      height:100vh;
+      .project-header{
+        background-color: white;
+        margin-bottom:1vw;
+        ion-grid{    
+          padding: 0vw;
+          ion-row{
+            padding: 0vw;
+            height: 6.67vw;
+            ion-col{ 
+              .project-title {
+                 color: #007F71;
+                 font-family: HelveticaNeue Medium;
+                 font-size: 2vw;
+                 padding-left: 3.75vw;
+                 padding-top: 2vw;
+                }
+              }
+            .back-page-button{
+              box-shadow: 0.19vw 0vw 0.31vw #e4e2e2;
+              font-size: 2vw;
+              line-height:5vw;
+              text-align: center;
+              padding: 0.75vw 0vw !important;
+            }
+          }
+        }
+      }
+      .project-setup-body{
+        margin-left: 2.75vw;
+      }
+        .activity-heading{
+          font-size: 1.25vw;
+          font-family: HelveticaNeue Medium;
+          color: #000000;
+          margin-top: 2.18vw;
+          margin-left: 2vw; 
+          margin-bottom: 1.25vw;
+          
+        }
+        ion-grid{
+          .last-row{
+            height: 18vw!important;
+          }
+          ion-row{
+           ion-col{
+              .card{
+                margin:0vw 0vw 0vw 0vw;
+              }
+              .project-card-height{
+                height: 10.8vw;
+                width: 75vw;
+              }
+              ion-card-content{
+                padding: 0vw;
+                .activity-card-content{
+                  padding: 2.5vw 2.5vw 0vw 2.5vw;
+                  .pd-inputs{
+                    width: 32vw;
+                    height: 5.8vw;
+                    float: left;
+                    .input-label{
+                      font-size: 1.25vw;
+                      font-family: HelveticaNeue Regular;
+                      color: #6D6D6D;
+                    }
+                    ion-input{
+                      border-bottom: .104vw solid #afadad;
+                      .text-input{
+                        margin: 0.625vw 0.8vw 0vw 0vw;
+                        font-size: 2.3vw;
+                        font-family: HelveticaNeue Light;
+                        color: #007F71;
+                        height: 3.125vw;
+                      }
+                    }          
+                  }
+                  .sl-inputs{
+                        width: 19.4vw;
+                        height: 5.8vw;
+                        float: left;
+                        .input-label-sl{
+                          font-size:1.25vw;
+                          font-family:helveticaNeue Regular;
+                          color:#6D6D6d;
+                        }
+                        ion-item{
+                          padding: 0vw;
+                          ion-select{
+                            width: 100%;
+                            max-width: 100%;
+                            margin: 0.625vw 0.8vw 0vw 0vw;
+                            font-size: 2.3vw;
+                            font-family: HelveticaNeue Light;
+                            color: #007F71;
+                            border-bottom: .104vw solid #afadad;
+                            padding: 0vw 0.5vw 0vw 0vw;
+                            .select-placeholder{
+                              height: 2.5vw;
+                            }
+                          }
+                        }  
+                      }
+                      .date-inputs{
+                        width: 19.4vw;
+                        height: 5.81vw;
+                        float: left;
+                        .input-label-sl{
+                          font-size:1.25vw;
+                          font-family:helveticaNeue Regular;
+                          color:#6D6D6d;
+                        }
+                        .date-item{
+                          width:17vw;
+                          padding: 0vw;
+                          display: inline-flex;
+                          .datetime{
+                            width: 20vw;
+                            float: left;
+                            padding: 0vw;
+                            .datetime-placeholder, .datetime-text{   
+                              width: 100%;  
+                              max-width: 100%;
+                              margin: 0.625vw 0vw 0vw 0vw;
+                              font-size: 1.68vw;
+                              font-family: HelveticaNeue Light;
+                              color: #007F71;
+                              border-bottom: .104vw solid #afadad;
+                              padding: 0vw 0.5vw 0vw 0vw;
+                            }
+                          }
+                        }
+                        img{
+                          width: 1.875vw !important;
+                          height: 3.125vw;
+                          display: inline-flex;
+                          float:right;
+                        } 
+
+                      }
+                      .staff-list{
+                        margin: 0vw;
+                        ion-item{
+                          padding: 0vw;
+                          font-size: 1.56vw;
+                          font-family: HelveticaNeue Medium;
+                          border-bottom: .104vw solid #afadad;
+                          .label{
+                            margin: 0vw;
+                          }
+                        }
+                      }
+                      .space-right{
+                        margin-right: 5.8vw;
+                      }
+                    }
+                  }
+                  .background-field{
+                    font-size: 1.56vw;
+                    font-family: HelveticaNeue Medium;
+                    padding: 0.625vw 1vw;
+                  }
+                }
+              }
+              .btn-margin{
+                margin: 3.33vw 0vw;
+                .btn-outer{
+                    width:75vw;
+                    .upld-btn{
+                      width:25vw;
+                      height: 5vw;
+                      margin-right: 4.19vw;
+                      background-color: #cfcfcf;
+                      float:right;
+                      .button-inner{
+                        font-size: 1.45vw;
+                        font-family: helveticaNeue Light;
+                        color:#ffffff;
+                      }
+                    }
+                    .upld-btn:active{
+                        background-color: grey;
+                    }
+                    .cont-btn{
+                      width:15vw;
+                      height:5vw;
+                      float:right;
+                      background-color: #008dd6;
+                       .button-inner{
+                        font-size: 1.5vw;
+                        font-family: helveticaNeue Light;
+                        color:#ffffff;
+                      }
+                    }
+                    .cont-btn:active{
+                       background-color: grey;
+                    }
+                  }
+              }
+
+          }
+    }
+  }
+}
+
+@media all and (orientation:portrait) {
+  project-setup {
+    ion-grid{
+      padding: 0vw!important;
+      ion-col{
+        padding: 0vw!important;
+      }
+    }
+    .outer-scroll{
+      overflow-y:auto;
+      height:93vh;
+      ion-grid{
+        padding: 0vw!important;
+        ion-col{
+          padding: 0vw!important;
+        }
+      }
+    }
+    .project-setup-container {
+      background-color: #f2f2f2;
+      width: 88vw;
+      float: right;
+      height:100vh;
+  
+             .project-header{
+                background-color: white;
+                margin-bottom:1vw;
+                ion-grid{    
+                    padding: 0vw;
+                    ion-row{
+                        padding: 0vw;
+                        height: 10.67vw;
+                        ion-col{ 
+                            .project-title {
+                                color: #007F71;
+                                font-family: HelveticaNeue Medium;
+                                font-size: 3vw;
+                                padding-left: 2vw;
+                               padding-top: 3.2vw;
+                            }
+                        }
+                        .back-page-button{
+                            box-shadow: 0.16vw 0vw 0.5vw #e4e2e2;
+                            text-align: center;
+                            font-size: 3.33vw;
+                            line-height:5vw;;
+                            padding: 2.63vw 0vw !important;
+                        }
+                    }
+                }
+            }     
+
+      .project-setup-body{
+        margin-left: 2.5vw;
+        height:93vh;
+        .top-heading{
+          padding-top:2.5vw!important;
+        }
+      }
+      .activity-heading{
+                font-size: 2vw;
+                font-family: HelveticaNeue Medium;
+                color: #000000;
+                margin-top: 3.5vw;
+                margin-left: 2vw; 
+                margin-bottom: 2vw;
+            }
+        ion-grid{
+          ion-row{
+              ion-col{
+                  .card{
+                    margin:0vw 0vw 0vw 0vw;
+                  }
+                  .project-card-height{
+                    width: 80vw;
+                            height: auto;
+                            padding-bottom: 0.4vw;
+                  }
+                  ion-card-content{
+                    padding: 0vw;
+                    .activity-card-content{
+                      padding: 4vw 4vw 0vw 4vw;
+                      .pd-inputs{
+                        width: 31.33vw;
+                        height: 14.88vw;
+                        float: left;
+                        .input-label{
+                          font-size: 2.4vw;
+                          font-family: HelveticaNeue Regular;
+                          color: #6D6D6D;
+                          white-space: nowrap;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                        }
+                       
+                        ion-input{
+                          border-bottom: .16vw solid #afadad;
+                          .text-input{
+                            margin: 1.6vw 0.8vw 0vw 0vw;
+                            font-size: 3.5vw;
+                            font-family: HelveticaNeue Light;
+                            color: #007F71;
+                            height: 4.8vw;
+                          }
+                        } 
+                        .date-item{
+                          width:27vw;
+                          padding: 0vw;
+                          display: inline-flex;
+                          .datetime{
+                            width: 25.3vw;
+                            float: left;
+                            padding: 0vw;
+                            .datetime-placeholder, .datetime-text{   
+                              height: 4.8vw;
+                              width: 100%;
+                              max-width: 100%;
+                              margin: 1.6vw 1.8vw 0vw 0vw;
+                              font-size: 3.5vw;
+                              font-family: HelveticaNeue Light;
+                              color: #007F71;
+                              border-bottom: .16vw solid #afadad;
+                              padding: 0vw 0.5vw 0vw 0vw;
+                            }
+                          }
+                        }
+                        img{
+                        width: 3vw !important;
+                        margin-top: 2.08vw;
+                        display: inline-flex;
+                      }            
+                      }
+                      .sl-inputs{
+                        width: 31.3vw;
+                        height: 14.88vw;
+                        float: left;
+                        .input-label-sl{
+                          font-size: 2.4vw;
+                          font-family: HelveticaNeue Regular;
+                          color: #6D6D6D;
+                          white-space: nowrap;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                        }
+                        ion-item{
+                          padding: 0vw;
+                          ion-select{
+                            width: 100%;
+                            max-width: 100%;
+                            margin: 1.6vw 0.8vw 0vw 0vw;
+                            font-size: 3.5vw;
+                            font-family: HelveticaNeue Light;
+                            color: #007F71;
+                            border-bottom: .16vw solid #afadad;
+                            padding: 0vw 0.5vw 0vw 0vw;
+                            height: 4.8vw;
+                          }
+                        }
+                      }
+                      .staff-list{
+                        margin: 0vw;
+                        ion-item{
+                          padding: 0vw;
+                          font-size: 2.7vw;
+                          font-family: HelveticaNeue Medium;
+                          border-bottom: .16vw solid #afadad;
+                          .label{
+                            margin: 0vw;
+                          }
+                        }
+                        .last-row-bottom{
+                          margin-bottom: 3.2vw;
+                        }
+                      }
+                        .ps-top-margin-portrait{
+                                    margin-top: 4vw;
+                                }
+                                .space-right-portrait{
+                                    margin-right: 9.3vw;
+                                }
+                    }
+                  }
+                  .background-field{
+                    font-size: 2.7vw;
+                    font-family: HelveticaNeue Medium;
+                    padding: 1.6vw 1vw;
+                    height: 19.2vw;
+                  }
+                }
+              }
+                .btn-margin{
+                    margin: 4vw 0vw;
+                    .btn-outer{
+                        width: 80vw;
+                        .upld-btn{
+                            width: 28vw;
+                            height: 8vw;
+                            margin-right: 5vw;
+                            background-color: #cfcfcf;
+                            float: right;
+                            .button-inner{
+                                font-size: 2.1vw;
+                                font-family: helveticaNeue Light;
+                                color:#ffffff;
+                            }
+                        }
+                        .upld-btn:active{
+                       background-color: grey;
+                        }
+                        .cont-btn{
+                            width: 15vw;
+                            height: 8vw;
+                            float: right;
+                            background-color: #008dd6;
+                        .button-inner{
+                                font-size: 2.1vw;
+                                font-family: helveticaNeue Light;
+                                color:#ffffff;
+                            }
+                        }
+                        .cont-btn:active{
+                       background-color: grey;
+                    }
+                    }
+                }
+                  }
+              }
+
+          }
+}
+
+ion-picker-cmp{
+  .picker-wrapper{
+        transform: translateY(-90%) !important;
+  }
+}

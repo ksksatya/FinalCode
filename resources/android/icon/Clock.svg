@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="19px" viewBox="0 0 20 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Clock</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Datalyst-Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01510.FW_PJT_WD-Portrait" transform="translate(-23.000000, -718.000000)" fill="#9B9B9B">
+            <g id="Group-2" transform="translate(23.000000, 707.000000)">
+                <g id="Time-Stamp" transform="translate(0.000000, 10.000000)">
+                    <g id="Clock" transform="translate(0.000000, 1.000000)">
+                        <path d="M9.983,0.407 C4.953,0.407 0.875,4.486 0.875,9.516 C0.875,14.546 4.953,18.624 9.983,18.624 C15.014,18.624 19.092,14.546 19.092,9.516 C19.092,4.486 15.014,0.407 9.983,0.407 L9.983,0.407 Z M9.983,16.645 C6.046,16.645 2.855,13.453 2.855,9.517 C2.855,5.579 6.047,2.388 9.983,2.388 C13.921,2.388 17.112,5.579 17.112,9.517 C17.112,13.453 13.921,16.645 9.983,16.645 L9.983,16.645 Z" id="Shape"></path>
+                        <polygon id="Shape" points="10.677 4.368 9.29 4.368 9.29 9.804 12.662 13.175 13.642 12.195 10.677 9.229"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

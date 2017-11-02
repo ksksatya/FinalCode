@@ -1,0 +1,74 @@
+<ion-grid>
+    <ion-row>
+        <ion-col col-md-1 col-sm-1 col-lg-1 col-xl-1>
+             <nav-bar></nav-bar>
+        </ion-col>
+        <ion-col col-md-11 col-sm-11 col-lg-11 col-xl-11>
+            <div class="home-container outer-scroll">
+                <!--<ion-grid>
+                  <ion-row>
+                    <!--Inbox Card-->
+                    <!--<ion-col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6>-->
+                      <ion-card class="home-card card-right-margin">
+                        <ion-card-header class="inbox-header">Inbox&nbsp;(7)</ion-card-header>
+                        <ion-card-content>
+                          <ion-list no-lines>
+                            <ion-item *ngFor='let item of inboxContent'>
+                              <img class="content-icon" src={{item.url}}>
+                              <span class="card-content-title">{{item.title}}</span>
+                              <span class="count">{{item.count}}</span>
+                            </ion-item>
+                          </ion-list>
+                        </ion-card-content>
+                      </ion-card>
+                    <!--</ion-col>
+
+                    <!--Timelines Card-->
+                    <!--<ion-col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6>-->
+                      <ion-card class="home-card">
+                        <ion-card-header class="timeline-header">Timeline</ion-card-header>
+                        <ion-card-content>
+                          <ion-list no-lines>
+                            <ion-item *ngFor='let item of timelineContent'>
+                              <img class="content-icon" src={{item.url}}>
+                              <span class="card-content-title">{{item.title}}</span>
+                              <span class="count">{{item.count}}</span>
+                            </ion-item>
+                          </ion-list>
+                        </ion-card-content>
+                      </ion-card>
+                    <!--</ion-col>
+                  </ion-row>
+                </ion-grid>-->
+
+                <div class="projects-tab">
+                  <ion-list no-lines>
+                    <ion-item *ngFor="let pro of projectContent; let i=index" text-wrap [ngClass]="{active: isGroupShown(i)}">
+                      <h3 class="project-header"> 
+                        <ion-icon class="icon-arrow" (click)="gotoprojectstab(pro.title)" name="arrow-forward"></ion-icon>
+                        <span (click)="gotoprojectstab(pro.title)"> {{pro.title}} </span>
+                        <ion-icon class="icon-right" (click)="toggleGroup(i)" [name]="isGroupShown(i) ? 'remove-circle' : 'add-circle'"></ion-icon>
+                      </h3>
+                      <div *ngIf="isGroupShown(i)" class="list-container">
+                        <ion-grid>
+                          <ion-row class="project-list-header">
+                            <ion-col col-3 col-sm-3 col-md-3 class="first-col"> Project </ion-col>
+                            <ion-col col-3 col-sm-3 col-md-3 class="remaining-col"> Location </ion-col>
+                            <ion-col col-3 col-sm-3 col-md-3 class="remaining-col"> Start Date </ion-col>
+                            <ion-col col-3 col-sm-3 col-md-3 class="remaining-col"> End Date </ion-col>
+                          </ion-row>
+                          <ion-row *ngFor="let proData of pro.projectList" class="project-list-rows"> 
+                            <ion-col col-3 col-sm-3 col-md-3 class="project-name-col" (click)="openProjectDetails(proData)"> {{proData.projectName}} </ion-col>
+                            <ion-col col-3 col-sm-3 col-md-3 class="other-cols"> {{proData.location}} </ion-col>
+                            <ion-col col-3 col-sm-3 col-md-3 class="other-cols"> {{proData.startDate}} </ion-col>
+                            <ion-col col-3 col-sm-3 col-md-3 class="other-cols"> {{proData.endDate}} </ion-col>
+                          </ion-row>
+                        </ion-grid>
+                      </div>
+                    </ion-item>
+                  </ion-list>
+                </div>
+              </div>
+        </ion-col>
+    </ion-row>
+</ion-grid>

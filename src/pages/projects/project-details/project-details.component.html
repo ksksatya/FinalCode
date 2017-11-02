@@ -1,0 +1,70 @@
+
+  <nav-bar></nav-bar>
+
+  <div class="project-details-container outer-scroll">
+    <h2 class="h2-section">{{selectedProjectDetails.projectName}}</h2>
+
+    <h6 class="h6-section">PROJECT HEADER OR BRIEF AND GENERAL NOTES (CONTENT TBD)</h6>
+    <ion-card class="description">
+        <ion-content class="color">
+            {{selectedProjectDetails.projectDesc}}
+        </ion-content>
+    </ion-card>
+    <h6 class="h6-section">HISTORIC DATA AND RELATED DOCUMENTS</h6>
+    <ion-card class="his-description">
+        <ion-content class="color">
+            {{selectedProjectDetails.projectHistoricData}}
+        </ion-content>
+    </ion-card>
+    <h6 class="h6-section">ACTIVITIES BY SITES ({{selectedProjectDetails.sitesCount}} Sites - 1 COMPLETE)</h6>
+    <div *ngFor="let site of selectedProjectDetails.sitesData">
+      <ion-grid class="grid-section">
+        <ion-row>
+          <ion-col class="grid-section" col-10 col-md-10>
+            <ion-card class="card-section">
+              <ion-grid>
+                <ion-row class="row-section">
+                  <ion-col col-2 col-md-2>
+                    <h4 class="site-font">{{site.siteName}}</h4></ion-col>
+                  <ion-col class="icon-spacing-1" col-1 col-md-1 offset-md-3>
+                    <img src="assets/icon/FLM complete.png " (click)="openSiteData(site,selectedProjectDetails.projectName)" class="btn-tap" *ngIf="site.groundwaterLevelMeasurement">
+                    <img src="assets/icon/FLM not available .png"  *ngIf="!site.groundwaterLevelMeasurement">
+                  </ion-col>
+                  <ion-col class="icon-spacing-2" col-1 col-md-1>
+                    <img src="assets/icon/GWS complete.png"  class="btn-tap" (click)="groundWaterSampling(site,selectedProjectDetails.projectName)" *ngIf="site.groundwaterSampling">
+                     <img src="assets/icon/GWS not available .png" *ngIf="!site.groundwaterSampling">
+                  </ion-col>
+                  <ion-col class="icon-spacing-3" col-1 col-md-1>
+                   <img src="assets/icon/SS complete.png"  (click)="soilBoring(site,selectedProjectDetails.projectName)" class="btn-tap" *ngIf="site.hydrocarbonSampling"> 
+                   <img src="assets/icon/SS not available .png" *ngIf="!site.hydrocarbonSampling"> 
+                  </ion-col>
+                  <ion-col class="icon-spacing-4" col-1 col-md-1>
+                    <img src="assets/icon/WD complete_1.png"  class="btn-tap" (click)="openWellRefData(site,selectedProjectDetails.projectName)" *ngIf="site.soilSamples"> 
+                    <img src="assets/icon/WD not available _1.png" *ngIf="!site.soilSamples"> 
+                  </ion-col>
+                  <ion-col class="icon-spacing-5" col-1 col-md-1>
+                    <img src="assets/icon/WD complete_2.png"  class="btn-tap" (click)="openWellConData(site,selectedProjectDetails.projectName)" *ngIf="site.waterpump"> 
+                    <img src="assets/icon/WD not available _2.png" *ngIf="!site.waterpump"> 
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card>
+          </ion-col>
+          <ion-col  class="icon-list"col-1 col-md-1>
+            <div class="sync-icon cloud-icon" *ngIf="site.siteListIcon">
+               <ion-icon name="list" ></ion-icon>
+            </div>
+          </ion-col>
+          <ion-col class="icon-cloud" col-1 col-md-1>
+            <div class="sync-icon" [ngClass] ='{"cloud-icon" : site.siteCloud}' >
+              <ion-icon name="cloud-download"  *ngIf="site.siteCloud"></ion-icon>
+              <ion-icon name="infinite" *ngIf="!site.siteCloud"></ion-icon>
+            </div>
+            <!--<div class="icons-div">
+               <ion-icon class="cloud-icon" name="cloud-download" ></ion-icon>
+            </div>-->
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>

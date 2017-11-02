@@ -1,0 +1,211 @@
+<nav-bar>
+</nav-bar>
+<div class="well-construction-container">
+  <div class="project-header">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="back-page-button" col-1 col-md-1>
+          <ion-icon name="arrow-back" (click)="goBackToDetails()"></ion-icon>
+        </ion-col>
+        <ion-col col-6 col-md-6>
+          <div class="project-title">{{projectName}} : {{siteData.siteName}}</div>
+        </ion-col>
+        <ion-col col-5 col-md-5 class="icons-col">
+          <div class="activity-icons corner-icon selected-activity">
+            <img src="assets/icon/WD complete_2.png" *ngIf="siteData.waterpump">
+            <img src="assets/icon/WD not complete_2.png" *ngIf="!siteData.waterpump">
+          </div>
+          <div class="activity-icons">
+            <img src="assets/icon/WD complete_1.png" *ngIf="siteData.soilSamples"
+            (click)="headerNavigation('well')">
+            <img src="assets/icon/WD not complete_1.png" *ngIf="!siteData.soilSamples">
+          </div>
+          <div class="activity-icons">
+            <img src="assets/icon/SS complete.png" *ngIf="siteData.hydrocarbonSampling"
+            (click)="headerNavigation('soil')">
+            <img src="assets/icon/SS not complete.png" *ngIf="!siteData.hydrocarbonSampling">
+          </div>
+          <div class="activity-icons" >
+            <img src="assets/icon/GWS complete.png" *ngIf="siteData.groundwaterSampling"
+            (click)="headerNavigation('groundwater')">
+            <img src="assets/icon/GWS not complete.png" *ngIf="!siteData.groundwaterSampling">
+          </div>
+          <div class="activity-icons margin-right " >
+            <img src="assets/icon/FLM complete.png" *ngIf="siteData.groundwaterLevelMeasurement"
+            (click)="headerNavigation('fluidlevel')">
+            <img src="assets/icon/FLM not complete.png" *ngIf="!siteData.groundwaterLevelMeasurement">
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+    <div class="activity-input-container outer-scroll">
+      <div class="img-container">
+            <img *ngIf="grade" class="adjust" src="assets/icon/Above Grade1.png">
+            <img *ngIf="!grade" class="adjust" src="assets/icon/Below grade1.png">
+      </div>
+      <div class="form-container">
+          <form [formGroup]="wellConstructionForm">
+               <div *ngIf="grade" class="activity-heading">Above Grade Well Completion Data</div>
+              <div *ngIf="!grade" class="activity-heading">At Grade Well Completion Data</div>
+              <ion-card>
+                  <ion-card-content>
+                      <div *ngIf="grade" class="dropdown-container space-right space-right-potrait allign align-potrait">
+                        <div class="dropdown-label">Casing Stickup</div>
+                        <div class="form-input">
+                            <ion-input type="number" maxlength="4" (keyup)="changeCasingStick(casingStick)"[(ngModel)]="casingStick" formControlName="casingStick">
+                            </ion-input>
+                            <span class="unit">ft ags</span>
+                             <div *ngIf="!pattern11" class="valid-msg">Must be a valid entry eg(2.22)</div>
+                        </div>
+                      </div>
+                      <div class="dropdown-container space-right space-right-potrait allign">
+                        <div class="dropdown-label">Top of Casing</div>
+                        <div class="form-input">
+                            <ion-input type="number" maxlength="4" (keyup)="changeTopCasing(topCasing)" [(ngModel)]="topCasing" formControlName="topCasing">
+                            </ion-input>
+                            <span class="unit">ft bgs</span>
+                             <div *ngIf="!pattern4" class="valid-msg">Must be a valid entry eg(2.22)</div>
+                        </div>
+                      </div>
+                       <div class="dropdown-container space-right space-right-potrait">
+                        <div class="dropdown-label">Borehole Diameter</div>
+                        <div class="form-input">
+                            <ion-input type="number" (keyup)="changeBoreHole(boreHoleDiameter)" maxlength="5" [(ngModel)]="boreHoleDiameter" formControlName="boreHoleDiameter">
+                            </ion-input>
+                            <span class="unit-in">in</span>
+                            <div *ngIf="!pattern" class="valid-msg">Must be a valid entry eg(22.22)</div>
+                        </div>
+                      </div>
+                       <div class="dropdown-container space-right space-right-potrait allign">
+                        <div class="dropdown-label">Top of Grout</div>
+                        <div class="form-input">
+                            <ion-input type="number" maxlength="4" (keyup)="changeTopGrount(topGrout)" [(ngModel)]="topGrout" formControlName="topGrout">
+                            </ion-input>
+                            <span class="unit">ft bgs</span>
+                             <div *ngIf="!pattern5" class="valid-msg">Must be a valid entry eg(2.22)</div>
+                        </div>
+                      </div>
+                       <div class="dropdown-container space-right space-right-potrait">
+                        <div class="dropdown-label">Casing Diameter</div>
+                        <div class="form-input">
+                            <ion-input type="number" maxlength="5" (keyup)="changeCasingDiameter(casingDiameter)" [(ngModel)]="casingDiameter" formControlName="casingDiameter">
+                            </ion-input>
+                            <span class="unit-in">in</span>
+                              <div *ngIf="!pattern1" class="valid-msg">Must be a valid entry eg(22.22)</div>
+                        </div>
+                      </div>
+                      <div class="dropdown-container space-right space-right-potrait allign">
+                        <div class="dropdown-label">Top of Seal</div>
+                        <div class="form-input">
+                            <ion-input type="number" maxlength="5" (keyup)="changeTopSeal(topSeal)"[(ngModel)]="topSeal" formControlName="topSeal">
+                            </ion-input>
+                            <span class="unit">ft bgs</span>
+                             <div *ngIf="!pattern6" class="valid-msg">Must be a valid entry eg(22.22)</div>
+                        </div>
+                      </div>
+                      <div class="dropdown-container space-right space-right-potrait">
+                        <div class="dropdown-label">Casing Type</div>
+                        <div class="form-input">
+                            <ion-item>
+                                <ion-select type="number" maxlength="6" [(ngModel)]="casingType" formControlName="casingType" interface="popover">
+                                    <ion-option *ngFor="let casingType of casingTypeList" class="values" selected="casingType[0]">{{casingType}}</ion-option>
+                                </ion-select>
+                            </ion-item>
+                        </div>
+                      </div>
+                      <div class="dropdown-container space-right space-right-potrait allign">
+                        <div class="dropdown-label">Top of FilterPack</div>
+                        <div class="form-input">
+                            <ion-input type="number" maxlength="5" (keyup)="changeFilterPack(topFilterPack)" [(ngModel)]="topFilterPack" formControlName="topFilterPack">
+                            </ion-input>
+                            <span class="unit">ft bgs</span>
+                             <div *ngIf="!pattern7" class="valid-msg">Must be a valid entry eg(22.22)</div>
+                        </div>
+                      </div>
+                      <div class="dropdown-container space-right space-right-potrait">
+                        <div class="dropdown-label">Screen Diameter</div>
+                        <div class="form-input">
+                            <ion-input type="number" maxlength="5" (keyup)="changeScreenDiameter(screenDiameter)"[(ngModel)]="screenDiameter" formControlName="screenDiameter">
+                            </ion-input>
+                            <span class="unit-in">in</span>
+                             <div *ngIf="!pattern2" class="valid-msg">Must be a valid entry eg(22.22)</div>                         
+                        </div>
+                      </div>
+                      <div class="dropdown-container space-right space-right-potrait allign">
+                        <div class="dropdown-label">Top of Screen</div>
+                        <div class="form-input">
+                            <ion-input type="number" maxlength="5" (keyup)="changeTopOfScreen(topScreen)" [(ngModel)]="topScreen" formControlName="topScreen">
+                            </ion-input>
+                            <span class="unit">ft bgs</span>
+                            <div *ngIf="!pattern8" class="valid-msg">Must be a valid entry eg(22.22)</div>    
+                        </div>
+                      </div>
+                      <div class="dropdown-container space-right space-right-potrait">
+                        <div class="dropdown-label">Screen Type</div>
+                        <div class="form-input">
+                            <ion-item>
+                                <ion-select type="number" maxlength="6" [(ngModel)]="screenType" formControlName="screenType" interface="popover">
+                                    <ion-option *ngFor="let screenType of screenTypeList" class="values" selected="screenType[0]">{{screenType}}</ion-option>
+                                </ion-select>
+                            </ion-item>
+                        </div>
+                      </div>
+                      <div class="dropdown-container space-right space-right-potrait allign">
+                        <div class="dropdown-label">Top of Sump</div>
+                        <div class="form-input">
+                            <ion-input type="number" maxlength="5" (keyup)="changeTopSump(topSump)" [(ngModel)]="topSump" formControlName="topSump">
+                            </ion-input>
+                            <span class="unit">ft bgs</span>
+                            <div *ngIf="!pattern9" class="valid-msg">Must be a valid entry eg(22.22)</div>   
+                        </div>
+                      </div>
+                      <div class="dropdown-container space-right space-right-potrait">
+                        <div class="dropdown-label">Screen slot size</div>
+                        <div class="form-input">
+                            <ion-input type="number" maxlength="4" (keyup)="changeSlotSize(screenSlot)" [(ngModel)]="screenSlot" formControlName="screenSlot">
+                            </ion-input>
+                            <span class="unit-in">in</span>
+                             <div *ngIf="!pattern3" class="valid-msg">Must be a valid entry eg(2.22)</div> 
+                        </div>
+                      </div>
+                      <div class="dropdown-container space-right space-right-potrait allign">
+                        <div class="dropdown-label">Sump Bottom</div>
+                        <div class="form-input">
+                            <ion-input type="number" maxlength="5" (keyup)="changeSumpBottom(sumpBottom)" [(ngModel)]="sumpBottom" formControlName="sumpBottom">
+                            </ion-input>
+                            <span class="unit">ft bgs</span>
+                            <div *ngIf="!pattern10" class="valid-msg">Must be a valid entry eg(22.22)</div> 
+                        </div>
+                      </div>
+                      <div class="dropdown-container space-right space-right-potrait">
+                        <div class="dropdown-label">Filter Pack Type</div>
+                        <div class="form-input">
+                            <ion-item>
+                                <ion-select type="text" maxlength="6" [(ngModel)]="filterPackType" formControlName="filterPackType" interface="popover">
+                                </ion-select>
+<!--                                <span class="unit-in">in</span>-->
+                            </ion-item>
+                        </div>
+                      </div>
+                  </ion-card-content>
+              </ion-card>  
+          </form>
+      </div>
+        
+        <ion-grid>
+         <ion-row class="last-row">
+                  <ion-col col-12 col-md-12 col-sm-12 class="btn-margin" >
+                      <div class="btn-outer">
+                       <img src="assets/icon/PDF_icon.svg"  class="export-btn" (click)="triggerPDF()">
+                           <img src="assets/icon/CSV_Icon.svg"  class="export-btn" (click)="triggerCSV()">               
+                        <button class="save-btn" (click)="save()" [disabled]=" !wellConstructionForm.dirty" ion-button>SAVE</button>
+                        <button ion-button clear (click)="reset()" class="reset-btn complete">Reset</button>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+    </div>
+
+</div>

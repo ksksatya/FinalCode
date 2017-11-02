@@ -1,0 +1,157 @@
+    <ion-grid>
+        <ion-row>
+            <ion-col col-sm-1 col-md-1 col-xl-1>
+                <div class="nav-height">
+                    <nav-bar></nav-bar>
+                </div>
+            </ion-col>
+
+            <ion-col col-sm-11 col-md-11 col-xl-11>
+                <div class="project-setup-container"> 
+                    <div class="project-header">
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col class="back-page-button" col-1 col-sm-1 col-md-1 col-xl-1>
+                                    <ion-icon name="arrow-back" (click)="goBackToDetails()"></ion-icon>
+                                </ion-col>
+
+                                <ion-col col-6 col-sm-6 col-md-6 col-xl-6>
+                                    <div class="project-title">Project Setup</div>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </div>
+
+                    <div class="project-setup-body outer-scroll">
+                        <form [formGroup]="projecctsetupForm1" >
+                            <div class="activity-heading">PROJECT DETAILS</div>
+                                <ion-grid>
+                                    <ion-row>
+                                        <ion-col col-11 col-sm-11 col-md-11 col-xl-11>
+                                            <ion-card class="project-card-height">
+                                                <ion-card-content>
+                                                    <div class="activity-card-content">
+                                                        <div class="pd-inputs space-right space-right-portrait">
+                                                            <div class="input-label">Project Name</div> 
+                                                            <ion-input type="text" name="projectName" [(ngModel)]="projectname" formControlName="projectname"></ion-input>
+                                                        </div>
+
+                                                        <div class="pd-inputs">
+                                                            <div class="input-label">Project Number</div>
+                                                            <ion-input type="text" name="projectNumber" [(ngModel)]="projectno" formControlName="projectno"></ion-input>
+                                                        </div>
+                                                    </div>
+                                                </ion-card-content>
+                                            </ion-card>
+                                        </ion-col>
+                                    </ion-row>
+                                    
+                                    <div class="activity-heading">SITE LOCATION</div>
+                                    <ion-row>
+                                        <ion-col col-11 col-sm-11 col-md-11 col-xl-11>
+                                            <ion-card class="project-card-height">
+                                                <ion-card-content>
+                                                    <div class="activity-card-content">
+                                                        <div class="sl-inputs space-right space-right-portrait">
+                                                            <div class="input-label-sl">City</div>
+                                                            <ion-item>
+                                                                <ion-select interface="popover" [(ngModel)]="item1" name="city" formControlName="city">
+                                                                    <ion-option class="values" *ngFor="let item1 of city" [value]="item1">{{item1}}</ion-option>
+                                                                </ion-select>
+                                                            </ion-item>
+                                                        </div>
+
+                                                        <div class="sl-inputs space-right">
+                                                            <div class="input-label-sl">State</div>
+                                                            <ion-item>
+                                                                <ion-select interface="popover" [(ngModel)]="item2" name="state" formControlName="state">
+                                                                    <ion-option class="values" *ngFor="let item2 of state" [value]="item2">{{item2}}</ion-option>
+                                                                </ion-select>
+                                                            </ion-item>
+                                                        </div>
+
+                                                        <div class="sl-inputs">
+                                                            <div class="input-label-sl">Country</div>
+                                                            <ion-item>
+                                                                <ion-select interface="popover" [(ngModel)]="item3" name="country" formControlName="country">
+                                                                    <ion-option class="values" *ngFor="let item3 of country" [value]="item3">{{item3}}</ion-option>
+                                                                </ion-select>
+                                                            </ion-item>
+                                                        </div>
+                                                    </div>
+                                                </ion-card-content>
+                                            </ion-card>
+                                        </ion-col>
+                                    </ion-row>
+
+                                    
+                                    <div class="activity-heading"></div>
+                                    <ion-row>
+                                        <ion-col col-11 col-sm-11 col-md-11 col-xl-11>
+                                            <ion-card class="project-card-height">
+                                                <ion-card-content>
+                                                    <div class="activity-card-content">
+                                                        <div class="pd-inputs date-inputs space-right space-right-portrait">
+                                                            <div class="input-label">Field Event Start Date</div>
+                                                            <ion-item class="date-item">
+                                                                <ion-datetime #datePicker displayFormat="DD/MM/YYYY" pickerFormat="DD MMM YYYY" placeholder="DD/MM/YYYY" min="2015" max="2030" name="start-date" 
+                                                                          [(ngModel)]="startDate" formControlName="startdate"></ion-datetime>
+                                                            </ion-item>
+                                                            <img src="assets/icon/calender_SVG.svg" (click)="datePicker.open()">
+                                                        </div>
+
+                                                        <div class="pd-inputs date-inputs">
+                                                            <div class="input-label">Field Event End Date</div>
+                                                            <ion-item class="date-item">
+                                                                <ion-datetime #datePicker1 displayFormat="DD/MM/YYYY" pickerFormat="DD MMM YYYY" placeholder="DD/MM/YYYY"  min="2015" max="2030" name="end-date" 
+                                                                        [(ngModel)]="endDate" formControlName="enddate"></ion-datetime>
+                                                            </ion-item>
+                                                            <img src="assets/icon/calender_SVG.svg" (click)="datePicker1.open()">
+
+                                                        </div>
+                                                    </div>
+                                                </ion-card-content>
+                                            </ion-card>
+                                        </ion-col>
+                                    </ion-row>
+
+                                    <div class="activity-heading">SCOPE OF WORK / BACKGROUND</div>
+                                    <ion-row>
+                                        <ion-col col-11 col-sm-11 col-md-11 col-xl-11>
+                                            <ion-card class="project-card-height">  
+                                                <ion-card-content>
+                                                    <ion-textarea type="text" maxlength="300" rows="5" placeholder="Text" class="background-field"
+                                                        [(ngModel)]="background" name="background" formControlName="background"></ion-textarea>
+                                                </ion-card-content>
+                                         </ion-card>
+                                        </ion-col>
+                                    </ion-row>
+
+                                    <div class="activity-heading">ASSIGNED FIELD STAFF</div>
+                                    <ion-row>
+                                        <ion-col col-11 col-sm-11 col-md-11 col-xl-11>
+                                            <ion-card class="project-card-height">
+                                                <ion-card-content>
+                                                        <ion-textarea type="text" maxlength="300" rows="3"
+                                                        [(ngModel)]="background2" class="background-field" name="background2" formControlName="background2"></ion-textarea>
+                                                </ion-card-content>
+                                            </ion-card>
+                                        </ion-col>
+                                    </ion-row>
+
+                                    <ion-row class="last-row">
+                                        <ion-col col-11 col-md-11 col-sm-11 class="btn-margin" >
+                                            <div class="btn-outer">
+                                                <button class="cont-btn"  ion-button (click)='continue()'>Save</button>
+                                                <button ion-button class="upld-btn">Import Project</button>   
+                                            </div>
+                                        </ion-col>
+                                    </ion-row>
+                                </ion-grid>
+                            </form>
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+

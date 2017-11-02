@@ -1,0 +1,184 @@
+
+    <nav-bar></nav-bar>
+  <div class="well-reff-container">  
+<div class="project-header">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="back-page-button" col-1 col-md-1>
+            <ion-icon name="arrow-back" (click)="goBackToDetails()"></ion-icon>
+          </ion-col>
+
+          <ion-col col-6 col-md-6>
+            <div class="project-title">{{projectName}} : {{siteData.siteName}}</div>
+          </ion-col>
+
+            <ion-col col-5 col-md-5 class="icons-col">
+            <div class="activity-icons corner-icon ">
+                <img src="assets/icon/WD complete_2.png" *ngIf="siteData.waterpump"
+                (click)="headerNavigation('wellcon')"> 
+                <img src="assets/icon/WD not complete_2.png" *ngIf="!siteData.waterpump"> 
+            </div>
+            <div class="activity-icons selected-activity">
+                <img src="assets/icon/WD complete_1.png" *ngIf="siteData.soilSamples"> 
+                <img src="assets/icon/WD not complete_1.png" *ngIf="!siteData.soilSamples"> 
+            </div>
+            <div class="activity-icons">
+                <img src="assets/icon/SS complete.png" *ngIf="siteData.hydrocarbonSampling"
+                (click)="headerNavigation('soil')"> 
+                  <img src="assets/icon/SS not complete.png" *ngIf="!siteData.hydrocarbonSampling"> 
+            </div>
+            <div class="activity-icons" >
+              <img src="assets/icon/GWS complete.png" *ngIf="siteData.groundwaterSampling"
+              (click)="headerNavigation('groundwater')">
+              <img src="assets/icon/GWS not complete.png" *ngIf="!siteData.groundwaterSampling">
+            </div>
+            <div class="activity-icons margin-right">
+              <img src="assets/icon/FLM complete.png" *ngIf="siteData.groundwaterLevelMeasurement"
+               (click)="headerNavigation('fluidlevel')">
+              <img src="assets/icon/FLM not complete.png" *ngIf="!siteData.groundwaterLevelMeasurement">
+            </div>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="activity-input-container outer-scroll">
+      
+      <div class="activity-heading top-heading">WELL REFERENCE DATA</div>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-10 col-md-10 class="expand-col">
+            <!--cardList left-space-->
+            <ion-card class="color">                      
+              <ion-card-content>
+                <div class="activity-card-content">
+                  <div class="dropdown-container space-right space-right-potrait">
+                    <div class="dropdown-label">Well Diameter</div>
+                      <div class="form-input">
+                      <ion-input  type="number" required [(ngModel)]="wellDiameter"  disabled="true" required></ion-input>
+                      <span class="inch">in</span>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-container space-right">
+                    <div class="dropdown-label">Borehole Diameter</div>
+                      <div class="form-input">
+                      <ion-input type="number" maxlength="5" [(ngModel)]="boreHoleDiameter"  disabled="true" required></ion-input>
+                      <span class="inch">in</span>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-container space-right-potrait">
+                    <div class="dropdown-label fix-label-ipad">Sand Height Over Sump</div>
+                      <div class="form-input">
+                      <ion-input type="number" maxlength="6" [(ngModel)]="sandHeight" disabled="true" required></ion-input>
+                      <span class="inch">ft</span>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="dropdown-container space-right-potrait">
+                    <div class="dropdown-label">Filter Pack Porosity</div>
+                      <div class="form-input">
+                      <ion-input type="number" maxlength="4" [(ngModel)]="filterPack"  disabled="true" required></ion-input>
+                
+                    </div>
+                  </div>    
+                 </div>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+         <form [formGroup]="wellDataForm">
+        <div class="activity-heading">FLUID LEVELS</div>    
+        <ion-row>
+          <ion-col col-10 col-md-10 class="expand-col">
+            <ion-card class="ground-level">                      
+              <ion-card-content>
+                <div class="activity-card-content input-container-height">
+                  <div class="dropdown-container space-right space-right-potrait">
+                    <div class="dropdown-label">Depth to Water</div>
+                    <div class="form-input">
+                      <ion-input type="number" maxlength="7" [(ngModel)]="depthToWater" formControlName="depthToWater" (keyup)="changeDepthToWater(depthToWater)" required></ion-input>
+                      <span class="unit">ft btoc</span>
+                        <div *ngIf="!pattern1" class="valid-msg">Must be a valid entry eg(222.222)</div>
+                    </div>
+                  </div>
+                  <div class="dropdown-container space-right">
+                    <div class="dropdown-label">Depth to Product</div>
+                    <div class="form-input">
+                      <ion-input type="number"  maxlength="7"  [(ngModel)]="depthToProduct" formControlName="depthToProduct" (keyup)="changeDepthToProduct(depthToProduct)" required></ion-input>
+                      <span class="unit">ft btoc</span>
+                         <div *ngIf="!pattern2" class="valid-msg">Must be a valid entry eg(222.222)</div>
+                    </div>
+                  </div>
+
+                     <div class="dropdown-container ">
+                    <div class="dropdown-label">Total Depth</div>
+                    <div class="form-input">
+                      <ion-input type="number" maxlength="7" [(ngModel)]="totalDepth" formControlName="totalDepth" (keyup)="changeTotalDepth(totalDepth)" required></ion-input>
+                    <span class="unit">ft btoc</span>
+                         <div *ngIf="!pattern" class="valid-msg">Must be a valid entry eg(222.222)</div>
+                    </div>
+                  </div>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+          <form [formGroup]="disabledPurgeGroup">
+        <div class="activity-heading">PURGE VOLUMES</div>
+        <ion-row>
+          <ion-col col-10 col-md-10 class="expand-col">
+            <ion-card class="last-card color">                      
+              <ion-card-content>
+                <div class="activity-card-content input-container-height">
+                  <div class="dropdown-container space-right space-right-potrait">
+                    <div class="dropdown-label fix-label-ipad">Minimum (3 Bore Hole Vol.)</div>
+                    <div class="form-input">
+                      <ion-input type="number" formControlName="minimum" pattern="/^[0-9]{3}[.]{1}?[0-9]{3}$/i"  [(ngModel)]="minimum"  disabled="true" maxlength="7" required></ion-input>
+                      <span class="gal">gal</span>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-container space-right">
+                    <div class="dropdown-label fix-label-ipad large-dropdown">Maximum (10 Bore Hole Vol.)</div>
+                    <div class="form-input">
+                      <ion-input type="number" formControlName="maximum" pattern="/^[0-9]{3}[.]{1}?[0-9]{3}$/i"  [(ngModel)]="maximum" disabled="true" maxlength="7" required></ion-input>
+                      <span class="gal">gal</span>
+                    </div>
+                  </div>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+         </form>
+        <!--<ion-row class="bottom-row keyboard-issue-row-height">
+          <ion-col class="bottom-ctls" col-5 col-md-5>
+            <ion-icon class="clock-icon" ios="ios-time" md="md-time"></ion-icon><span class="date-and-time">&nbsp; {{currentDate | async | date:'H:mm'}}&nbsp;<span class="hours">hrs</span> &nbsp;&nbsp;&nbsp; {{currentDate | async | date:'dd MMM y'}}</span>
+          </ion-col>
+
+          <ion-col col-1 col-md-1 offset-md-2 class="shift-col-40">
+            <button ion-button clear type="reset" class="reset-btn">RESET</button>
+          </ion-col>
+
+          <ion-col col-1 col-md-1 offset-md-1 class="shift-col-90">
+            <button class="cont-btn"  ion-button  [disabled]="!(wellDataForm.dirty) || validationFlag "(click)='continueWellDev()'>CONTINUE</button>
+          </ion-col>
+      </ion-row>-->
+
+         <ion-row class="last-row">
+                  <ion-col col-11 col-md-11 col-sm-11 class="btn-margin" >
+                      <div class="btn-outer">
+                        
+                         <button class="save-btn"  ion-button  [disabled]="(wellDataForm.invalid)" (click)='continueWellDev()'>CONTINUE</button>
+                          <button ion-button clear type="reset"(click)="resetValidation()" class="reset-btn">RESET</button>
+                        </div>
+                    </ion-col>
+                </ion-row>
+           
+          </form>
+      </ion-grid>
+    </div>
+  </div>

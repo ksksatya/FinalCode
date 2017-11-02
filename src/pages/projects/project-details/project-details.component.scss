@@ -1,0 +1,266 @@
+@media all and (orientation:landscape) {
+  project-details {
+    background-color: #f2f2f2;
+    .h2-section {
+      margin-bottom: 0vw;
+      margin-top: 2.5vw;
+      font-size: 1.875vw;
+      font-family: HelveticaNeue Medium;
+      color: #007F71;
+    }
+    .icon-list{
+      right:3.22vw;
+    }
+    .icon-cloud{
+      right:5.20vw;
+    }
+    .icon-spacing-1{
+      right:9.375vw;
+    }
+      .btn-tap:active{
+        background-color: grey;      
+        border: 1px solid #a1a1a1;  
+      }
+    .icon-spacing-2{
+      right:7.5vw;
+    }
+    .icon-spacing-3{
+      right:5.625vw;
+    }
+    .icon-spacing-4{
+      right:3.75vw;
+    }
+    .icon-spacing-5{
+      right:1.875vw;
+    }
+      .color{
+          background-color: gainsboro;
+      }
+    .h6-section {
+      margin-bottom: 1.25vw;
+      margin-top: 2.5vw;
+      font-size: 1.25vw;
+      font-family: HelveticaNeue Medium;
+      color: #000000;
+      padding-left: 1.66vw;
+    }
+    .h4-section {
+      font-size: 2.08vw;
+      font-family: HelveticaNeue Light;
+      color: #6D6D6D;
+      padding-left: 1.66vw;
+    }
+    .description {
+      width: 70vw;
+      height: 11.04vw;
+      border: 0vw;
+      margin-left:0vw;
+    }
+    .his-description {
+      width: 70vw;
+      height: 6.66vw;
+      border: 0vw;
+      margin-left:0vw;
+    }
+    .grid-section {
+      padding-top: 0vw;
+      padding-left: 0vw
+    }
+    .row-section {
+      padding-left: 0vw;
+      padding-top: 1.04vw;
+       .site-font{
+        font-size:1.45vw;
+      }
+    }
+    .card-section {
+      margin-left: 0vw;
+      margin-top: 0vw;
+      margin-right: 0vw;
+      margin-bottom: .625vw;
+      width: 70vw;
+      height: 5.83vw;
+    }
+    .side-icons {
+      height: 5vw;
+      width: 5vw;
+    }
+    .outer-scroll {
+      overflow-y: auto;
+    }
+      ion-card{
+        .scroll-content{
+            padding: 2.08vw;
+            overflow-y:scroll;
+            font-size:1.45vw;
+          }
+      }
+     
+    .project-details-container {
+      width: 91.5vw;
+      height: 100vh;
+      float: right;
+      padding-left: 2.5vw;
+      img{
+        height:2.60vw;
+        width:2.60vw;
+      }
+    }
+    .sync-icon{
+      margin-top:.104vw;
+      // margin-left: 15px;
+      background-color: #ffffff;
+      border-radius: .52vw;
+      box-shadow: 0 .208vw .208vw 0 rgba(0, 0, 0, 0.14), 0 0.312vw .104vw -.208vw rgba(0, 0, 0, 0.2), 0 .104vw .52vw 0 rgba(0, 0, 0, 0.12);
+      height:5vw;
+      width:5vw;
+      color: #666666;
+      font-size: 2.29vw;
+      text-align: center;
+      padding: 1.145vw 0vw;
+    }
+    .cloud-icon{
+      background-color: white;
+      color: #209CEA;
+    }
+    .icon-margin {
+      margin: 1.77vw 0vw 0vw 1.77vw;
+    }
+  }
+}
+
+@media all and (orientation:portrait) {
+  project-details {
+    background-color: #f2f2f2;
+    .grid-section {
+      padding-top: 0vw;
+      padding-left: 0vw
+    }
+    .row-section {
+      padding-left: 0vw;
+      padding-top: 1.66vw;
+      [offset-md-3]{
+        margin:0px!important;
+      }
+       .site-font{
+        font-size:2.33vw;
+      }
+    }
+    .card-section {
+      margin-left: 0vw;
+      margin-top: 0vw;
+      margin-right: 0vw;
+      margin-bottom: 1vw;
+      width: 63.33vw;
+      height: 10vw;
+    }
+      ion-card{
+        .scroll-content{
+            padding: 3.33vw;
+            overflow-y:scroll;
+            font-size:2.33vw;
+          }
+      }
+      .color{
+          background-color: gainsboro;
+      }
+    .img-section {
+      //          padding-left: 50vw !important;
+      height: 4.16vw;
+      width: 4.16vw;
+    }
+    .icon-list{
+      right:6.66vw;
+    }
+    .icon-cloud{
+      right:5.33vw;
+    }
+    .description {
+      width: 63.33vw;
+      height: 18.33vw;
+      border: 0vw;
+        margin-left:0vw;
+    }
+    .his-description {
+      width: 63.33vw;
+      height: 10.66vw;
+      border: 0vw;
+      margin-left:0vw;
+    }
+      .btn-tap:active{
+        background-color: grey;      
+        border: 1px solid #a1a1a1;  
+      }
+    .icon-spacing-1{
+      left:4.16vw;
+    }
+    .icon-spacing-2{
+      left:7.5vw;
+    }
+    .icon-spacing-3{
+      left:10.83vw;
+    }
+    .icon-spacing-4{
+      left:15vw;
+    }
+    .icon-spacing-5{
+      left:19.16vw;
+    }
+    .his-description {
+      width: 63.33vw;
+      height: 11.33vw;
+      border: 0vw;
+    }
+    .h2-section {
+      margin-bottom: 0vw;
+      margin-top: 4vw;
+      font-size: 3vw;
+      font-family: HelveticaNeue Medium;
+      color: #007F71;
+    }
+    .h6-section {
+      margin-bottom: 2vw;
+      margin-top: 4vw;
+      font-size: 2vw;
+      font-family: HelveticaNeue Medium;
+      color: #000000;
+      padding-left: 2.66vw;
+    }
+    .h4-section {
+      font-size: 3.33vw;
+      font-family: HelveticaNeue Light;
+      color: #6D6D6D;
+      padding-left: 2.66vw;
+    }
+    .sync-icon{
+      margin-top:.16vw;
+      // margin-left: 15px;
+      background-color: #ffffff;
+      border-radius: .83vw;
+      box-shadow: 0 .33vw .33vw 0 rgba(0, 0, 0, 0.14), 0 .5vw .16vw -.33vw rgba(0, 0, 0, 0.2), 0 .16vw .83vw 0 rgba(0, 0, 0, 0.12);
+      height:8vw;
+      width:8vw;
+      color: #666666;
+      font-size: 3.66vw;
+      text-align: center;
+      padding: 1.83vw 0vw;
+    }
+    .cloud-icon{
+      background-color: white;
+      color: #209CEA;
+    }
+    .icon-margin {
+      margin: 2.83vw 0vw 0vw 2.83vw;
+    }
+    .project-details-container {
+      width: 88vw;
+      height: 100vh;
+      float: right;
+      padding-left: 1.33vw;
+      img{
+        height:4.16vw;
+        width:4.16vw;
+      }
+    }
+  }
+}

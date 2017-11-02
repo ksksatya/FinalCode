@@ -1,0 +1,82 @@
+@media all and (orientation:landscape) {
+  projects-page {
+    ion-grid{
+      padding: 0px!important;
+      ion-col{
+        padding: 0px!important;
+      }
+    }
+    background-color: #f2f2f2;
+
+    .projects-container{
+      width: 91.5vw;
+      height: 100vh;
+      float: right;
+
+      .tabs-grid {
+        width: 91.14vw;
+        margin: 1.66vw 0px 1.66vw .208vw;
+        ion-row {
+          margin-left:1.77vw;
+          .col-project-current{
+            color: #9B9B9B ;
+            font-size: 1.875vw;
+            font-family: HelveticaNeue Light;
+          }
+          .col-project{
+            color: #9B9B9B ;
+            font-size: 1.875vw;
+            font-family: HelveticaNeue Light;
+          }
+          
+          .tab-active{
+            color: #007F71 ;
+            font-size: 1.875vw;
+            font-family: HelveticaNeue Medium;
+          }
+        }
+      }
+    }
+  }
+}
+@media all and (orientation:portrait) {
+  projects-page {
+    ion-grid{
+      padding: 0px!important;
+      ion-col{
+        padding: 0px!important;
+      }
+    }
+    background-color: #f2f2f2;
+    .projects-container{
+      width: 88vw;
+      height: 100vh;
+      float: right;
+    }
+    .tabs-grid {
+      width:88vw!important;
+      margin-left:.5vw;
+      margin-bottom: 4vw;
+      margin-top: 4vw;
+      ion-row {
+        .col-project{
+          color: #9B9B9B ;
+          font-size: 3vw;
+          font-family: HelveticaNeue Light;
+        }
+        
+        .col-project-current{
+          color: #9B9B9B ;
+          font-size: 3vw;
+          font-family: HelveticaNeue Light;
+        }
+        
+        .tab-active{
+          color: #007F71 ;
+          font-size: 3vw;
+          font-family: HelveticaNeue Medium;
+        }
+      }
+    }
+  }
+}

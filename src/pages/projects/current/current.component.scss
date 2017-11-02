@@ -1,0 +1,283 @@
+@media all and (orientation:landscape) {
+  current-projects {
+      background-color: #f2f2f2;
+    .outer-scroll{
+      overflow-y: auto;
+      height:87.73vh;
+    }
+    ion-list {
+      ion-grid {
+        padding-top:0vw!important;
+        ion-row {
+          ion-col {
+            padding-bottom:0vw!important;
+            ion-card {
+              margin-left: 1.25vw!important;
+              margin-top:0vw!important;
+              width: 75vw !important;
+              margin-bottom: 0vw;
+              img {
+                width: 2.60vw !important;
+                height: 2.60vw;
+//                margin-left:18px!important;
+              }
+              .landscape-spacing{
+                left:1.35vw;
+                top: .8vw;
+              }
+              .project-data-height{
+                height:10.83vw;
+                padding-left: .93vw;
+                padding-top: 1.77vw;
+              }
+              .site-data-row{
+                border-top: .104vw solid #b7b5b5;
+                height: 6.56vw;
+                padding-top: 1.04vw;
+                padding-left: .93vw;
+              }
+              .project-name{
+                color: #6D6D6D ;
+                font-size: 1.875vw;
+                font-family: HelveticaNeue Light;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+              .client-name{
+                color: #6D6D6D ;
+                font-size: 1.66vw;
+                font-family: HelveticaNeue Light;
+                padding-left: 2.6vw!important;
+              }
+              .start-end-date{
+                color: #6D6D6D ;
+                font-size: 1.25vw;
+                font-family: HelveticaNeue Regular;
+                padding-left:4.27vw!important;
+              }
+              .location-name{
+                color: #6D6D6D ;
+                font-size: 1.66vw;
+                font-family: HelveticaNeue Medium;
+              }
+              .sites-count{
+                color: #6D6D6D ;
+                font-size: 1.45vw;
+                font-family: HelveticaNeue Regular;
+              }
+              .sites-location{
+                color: #000000 ;
+                font-size: 1.66vw;
+                font-family: HelveticaNeue Light;
+              }
+              .sites-coordinates{
+                color: #000000 ;
+                font-size: 1.25vw;
+                font-family: HelveticaNeue Light;
+              }
+              .dropdown-icon{
+                margin-left: 2.08vw!important;
+                font-size: 2.6vw;
+                color: #209CEA;
+                margin-top: 1vw;
+              }
+              .folder-icon{
+                margin-left: 2.6vw!important;
+                font-size: 2.6vw;
+                color: #209CEA;
+                margin-top: 1vw;
+              }
+              .check-icon{
+                margin-left: 1.875vw!important;
+                color: #98BF40;
+                font-size: 1.7vw!important;
+                margin-top: 1vw;
+              }
+              .padding-row{
+                margin-top:1.04vw;
+                padding-bottom:0.73vw;
+              }
+            } 
+          }
+          .sync-icon{
+            margin-top:.104vw;
+            margin-left: 1.56vw;
+            background-color: #ffffff;
+            border-radius: .52vw;
+            box-shadow: 0 .208vw .208vw 0 rgba(0, 0, 0, 0.14), 0 .31vw .104vw -.208vw rgba(0, 0, 0, 0.2), 0 .104vw .52vw 0 rgba(0, 0, 0, 0.12);
+            height:5vw;
+            width:5vw;
+            color: #666666;
+            font-size: 2.29vw;
+            text-align: center;
+            padding: 1.145vw 0vw;
+          }
+             .btn-tap:active{
+          background-color: grey;      
+          border: 1px solid #a1a1a1;  
+        }
+          .cloud-icon{
+            background-color: white;
+            color: #209CEA;
+          }
+        }
+      }
+    }
+  }
+}
+@media all and (orientation:portrait) {
+   current-projects {
+       background-color: #f2f2f2;
+    .outer-scroll{
+      overflow-y: auto;
+      height:93vh;
+    }
+    ion-list {
+      margin-bottom:1vw!important;
+      ion-grid {
+        width:86.66vw!important;
+        padding-left:.33vw!important;
+        padding-top:0vw!important;
+        ion-row {
+          ion-col {
+            padding-bottom:0vw!important;
+            ion-card {
+              margin-left: 0vw!important;
+              margin-top:0vw!important;
+              width: 72.33vw !important;
+              img {
+                width:4.16vw !important;
+                height: 4.16vw;
+                margin-left:-.33vw!important;
+              }
+               .landscape-spacing{
+                top: 1vw!important;
+              }
+              .icons-space-neg-3{
+                right:-.5vw;
+              }
+              .icons-space-1{
+                right:.16vw;
+              }
+              .icons-space-5{
+                right:.83vw;
+              }
+              .icons-space-6{
+                right:1vw;
+              }
+              .icons-space-10{
+                right:1.66vw;
+              }
+              .icons-space-15{
+                right:2.5vw;
+              }
+              .project-data-height{
+                height:19vw;
+                padding-left: 1.5vw;
+                padding-top: 2.83vw;
+              }
+              .site-data-row{
+                border-top: .16vw solid #b7b5b5;
+                height: 10.5vw;
+                padding-top: 1.66vw;
+                padding-left: 1.5vw;
+              }
+              .check-circle-portrait-position{
+                right:15.66vw;
+              }
+              .project-tabs{
+                height:17.66vw;
+              }
+              .active{
+                height: auto;
+              }
+              .project-name{
+                color: #6D6D6D ;
+                font-size: 3vw;
+                font-family: HelveticaNeue Light;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+              .client-name{
+                color: #6D6D6D ;
+                font-size: 2.66vw;
+                font-family: HelveticaNeue Light;
+                padding-left: 2.66vw!important;
+              }
+              .start-end-date{
+                color: #6D6D6D ;
+                font-size: 2vw;
+                font-family: HelveticaNeue Regular;
+                right: 16.16vw;
+              }
+              .location-name{
+                color: #6D6D6D ;
+                font-size: 2.66vw;
+                font-family: HelveticaNeue Medium;
+              }
+              .sites-count{
+                color: #6D6D6D ;
+                font-size: 2.33vw;
+                font-family: HelveticaNeue Regular;
+              }
+              .sites-location{
+                color: #000000 ;
+                font-size: 2.66vw;
+                font-family: HelveticaNeue Light;
+              }
+              .sites-coordinates{
+                color: #000000 ;
+                font-size: 2vw;
+                font-family: HelveticaNeue Light;
+              }
+              .potrait-folder-icon{
+                right: 15vw;
+                font-size: 3.3vw;;
+                color: #209CEA;
+                top: 1.5vw!important;
+              }
+              .potrait-dropdown-icon{
+                right:14.16vw;
+                font-size: 3.3vw;;
+                color: #209CEA;
+                top: 1.5vw!important;
+              }
+              .check-icon{
+                color: #98BF40;
+                font-size: 2.7vw!important;
+                margin-top: 2vw!important;
+              }
+              .padding-row{
+                padding-bottom:1.16vw;
+                margin-top: 2vw;
+              }
+            } 
+          }
+          .sync-icon{
+            margin-top:.16vw;
+            margin-left: 2.5vw;
+            background-color: #ffffff;
+            border-radius: .83vw;
+            box-shadow: 0 .33vw .33vw 0 rgba(0, 0, 0, 0.14), 0 .5vw .16vw -.33vw rgba(0, 0, 0, 0.2), 0 .16vw .83vw 0 rgba(0, 0, 0, 0.12);
+            height:8vw;
+            width:8vw;
+            color: #666666;
+            font-size: 3.66vw;
+            text-align: center;
+            padding: 1.83vw 0vw;
+          }
+          .btn-tap:active{
+          background-color: grey;      
+          border: 1px solid #a1a1a1;  
+        }
+          .cloud-icon{
+            background-color: white;
+            color: #209CEA;
+          }
+        }
+      }
+    }
+  }
+}

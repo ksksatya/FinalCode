@@ -1,0 +1,248 @@
+	<ion-grid>
+    <ion-row>
+        <ion-col col-md-1 col-sm-1 col-lg-1 col-xl-1>
+             <nav-bar></nav-bar>
+        </ion-col>
+        <ion-col col-md-11 col-sm-11 col-lg-11 col-xl-11>
+          <div class="site-details-container">  
+            <div class="project-header">
+              <ion-grid>
+                <ion-row>
+                  <ion-col class="back-page-button" col-1 col-md-1>
+                    <ion-icon name="arrow-back" (click)="goBackToDetails()"></ion-icon>
+                  </ion-col>
+
+                  <ion-col col-6 col-md-6>
+                    <div class="project-title">{{projectName}} : {{siteData.siteName}}</div>
+                  </ion-col>
+
+                  <ion-col col-5 col-md-5 class="icons-col">
+                    <div class="activity-icons corner-icon">
+                        <img src="assets/icon/WD complete_2.png" *ngIf="siteData.waterpump" 
+                        (click)="headerNavigation('wellcon')"> 
+                        <img src="assets/icon/WD not complete_2.png" *ngIf="!siteData.waterpump"> 
+                    </div>
+                    <div class="activity-icons" >
+                        <img src="assets/icon/WD complete_1.png" *ngIf="siteData.soilSamples" 
+                        (click)="headerNavigation('well')"> 
+                        <img src="assets/icon/WD not complete_1.png" *ngIf="!siteData.soilSamples"> 
+                    </div>
+                    <div class="activity-icons">
+                        <img src="assets/icon/SS complete.png" *ngIf="siteData.hydrocarbonSampling"
+                        (click)="headerNavigation('soil')"> 
+                          <img src="assets/icon/SS not complete.png" *ngIf="!siteData.hydrocarbonSampling"> 
+                    </div>
+                    <div class="activity-icons" >
+                      <img src="assets/icon/GWS complete.png" *ngIf="siteData.groundwaterSampling" 
+                      (click)="headerNavigation('groundwater')">
+                      <img src="assets/icon/GWS not complete.png" *ngIf="!siteData.groundwaterSampling">
+                    </div>
+                    <div class="activity-icons margin-right selected-activity">
+                      <img src="assets/icon/FLM complete.png" *ngIf="siteData.groundwaterLevelMeasurement">
+                      <img src="assets/icon/FLM not complete.png" *ngIf="!siteData.groundwaterLevelMeasurement">
+                    </div>
+                  </ion-col>
+
+                </ion-row>
+              </ion-grid>
+            </div>
+
+            <div class="activity-input-container outer-scroll">
+              <form [formGroup]="fluidForm">
+              
+              <div class="activity-heading top-heading">VISUAL INSPECTION</div>
+              <ion-grid>
+                <ion-row>
+                  <ion-col col-10 col-md-10 class="expand-col">
+                    <!--cardList left-space-->
+                    <ion-card class="visual-level">                      
+                      <ion-card-content>
+                          
+                        <div class="activity-card-content">
+                          
+                          <div class="dropdown-container space-right space-right-potrait">
+                            <div class="dropdown-label">Pad/Post Condition</div>
+                            <ion-item>
+                            <ion-select interface="popover" [(ngModel)]="item1" formControlName="padCondition" name="padCondition">
+                              <ion-option class="values" *ngFor="let item1 of padList" [value]="item1" [selected]="padList[0]">{{item1}}</ion-option>
+                            </ion-select>
+                            </ion-item>
+                          </div>
+                          
+                          <div class="dropdown-container space-right">
+                            <div class="dropdown-label">Bolts Condition</div>
+                            <ion-item>
+                            <ion-select interface="popover" [(ngModel)]="item2" formControlName="boltsCondition" name="boltsCondition">
+                              <ion-option class="values" *ngFor="let item2 of boltsList" [value]="item2" [selected]="item2[0]">{{item2}}</ion-option>
+                            </ion-select>
+                            </ion-item>
+                          </div>
+              
+                          <div class="dropdown-container space-right-potrait">
+                            <div class="dropdown-label">Protective Casing</div>
+                            <ion-item>
+                            <ion-select interface="popover" [(ngModel)]="item3" formControlName="protectiveCasing" name="casingCondition">
+                              <ion-option class="values" *ngFor="let item3 of protectiveList" [value]="item3" [selected]="item3[0]">{{item3}}</ion-option>
+                            </ion-select>
+                            </ion-item>
+                          </div>
+
+                          <div class="dropdown-container space-right">
+                            <div class="dropdown-label">Surrounding Vegetation</div>
+                            <ion-item>
+                            <ion-select interface="popover" [(ngModel)]="item4" formControlName="sorroundingVegetation" name="surroundingCondition">
+                              <ion-option class="values" *ngFor="let item4 of vegitationList" [value]="item4">{{item4}}</ion-option>
+                            </ion-select>
+                            </ion-item>
+                          </div>
+
+                          <div class="dropdown-container space-right space-right-potrait">
+                            <div class="dropdown-label">PVC Casing</div>
+                            <ion-item>
+                            <ion-select interface="popover" [(ngModel)]="item5" formControlName="pvcCasing" name="label5">
+                              <ion-option class="values" *ngFor="let item5 of pvcList" [value]="item5">{{item5}}</ion-option>
+                            </ion-select>
+                            </ion-item>
+                          </div>
+
+                          <div class="dropdown-container">
+                            <div class="dropdown-label">Label & Lock</div>
+                            <ion-item>
+                            <ion-select interface="popover" [(ngModel)]="item6" formControlName="labelLock" name="label6">
+                              <ion-option class="values" *ngFor="let item6 of labelList" [value]="item6" selected="item6[0]">{{item6}}</ion-option>
+                            </ion-select>
+                            </ion-item>
+                          </div>
+
+                          <div class="dropdown-container space-right space-right-potrait">
+                            <div class="dropdown-label">Dedicated Measuring Point</div>
+                            <ion-item>
+                            <ion-select interface="popover" [(ngModel)]="item7" formControlName="dedicatedMeasurePoint" name="dedicateMeassurement">
+                              <ion-option class="values" *ngFor="let item7 of dedicateList" [value]="item7"  selected="item7[0]">{{item7}}</ion-option>
+                            </ion-select>
+                            </ion-item>
+                          </div>
+
+                          <div class="dropdown-container space-right">
+                            <div class="dropdown-label">Wellhead Completion</div>
+                            <ion-item>
+                            <ion-select interface="popover" [(ngModel)]="item8" formControlName="wellHeadCompletion" name="wellHeadCompletion">
+                              <ion-option class="values" *ngFor="let item8 of wellHeadList" [value]="item8" selected="item8[0]">{{item8}}</ion-option>
+                            </ion-select>
+                            </ion-item>
+                          </div>
+
+                          <div class="dropdown-container space-right-potrait">
+                            <div class="dropdown-label">Well Secure</div>
+                            <ion-item>
+                            <ion-select interface="popover" [(ngModel)]="item9" formControlName="wellSecure" name="wellSecure">
+                              <ion-option class="values" *ngFor="let item9 of wellSecureList" [value]="item9" selected="item9[0]">{{item9}}</ion-option>
+                            </ion-select>
+                            </ion-item>
+                          </div>
+
+                        </div>
+                          
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-col>
+
+                  <ion-col class="reduce-col" col-2 col-md-2 col-sm-2 col-lg-2>
+                    <ion-col col-1 col-md-1>
+                      <img class="icons-photo" src='assets/icon/camera_icon.svg' />
+                    </ion-col>
+                    <ion-col col-1 col-md-1 class="align-video">
+                      <img class="icons-photo" src='assets/icon/video_icon.svg' />
+                    </ion-col>
+                  </ion-col>
+                </ion-row>
+
+                <div class="activity-heading">GROUND WATER LEVELS</div>
+                <ion-row>
+                  <ion-col col-10 col-md-10 class="expand-col">
+                    <ion-card class="ground-level">                      
+                      <ion-card-content>
+                        <div class="activity-card-content input-container-height">
+                          <div class="dropdown-container space-right space-right-potrait">
+                            <div class="dropdown-label">Depth to Water</div>
+                            <div class="form-input">
+                              <ion-input type="number" (keyup)="changeDepthToWater(item10)"  maxlength="7" [(ngModel)]="item10" formControlName="depthToWater" name="item10"></ion-input>
+                              <span class="unit">ft</span>
+                                   <div *ngIf="!pattern1" class="valid-msg">Must be a valid entry eg(222.222)</div>
+                            </div>
+                          </div>
+
+                          <div class="dropdown-container space-right">
+                            <div class="dropdown-label">Depth to Product</div>
+                            <div class="form-input">
+                              <ion-input type="number" maxlength="7" (keyup)="changeDepthToProduct(item11)" [(ngModel)]="item11" formControlName="depthToProduct" name="item11"></ion-input>
+                              <span class="unit">ft</span>
+                                <div *ngIf="!pattern2" class="valid-msg">Must be a valid entry eg(222.222)</div>
+                            </div>
+                          </div>
+
+                            <div class="dropdown-container ">
+                            <div class="dropdown-label">Total Depth</div>
+                            <div class="form-input">
+                              <ion-input type="number" (keyup)="changeTotalDepth(item12)" maxlength="7"  [(ngModel)]="item12" formControlName="totalDepth" name="item12"></ion-input>
+                              <span class="unit">ft</span>
+                                <div *ngIf="!pattern" class="valid-msg">Must be a valid entry eg(222.222)</div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-col>
+                </ion-row>
+
+
+                <div class="activity-heading">NOTES</div>
+                <ion-row>
+                  <ion-col col-10 col-md-10 class="expand-col">
+                    <ion-card class="textarea-card">                      
+                          <ion-textarea type="text" maxlength="300" rows="5" placeholder="Text"  [(ngModel)]="item13" formControlName="notes" name="item13"></ion-textarea>
+                    </ion-card>
+                  </ion-col>
+
+                  <ion-col class="reduce-col" col-2 col-md-2 col-sm-2 col-lg-2>
+                    <ion-col col-1 col-md-1>
+                      <img class="icons-photo" src='assets/icon/camera_icon.svg' />
+                    </ion-col>
+                    <ion-col col-1 col-md-1 class="align-video">
+                      <img class="icons-photo" src='assets/icon/video_icon.svg' />
+                    </ion-col>
+                  </ion-col>
+                </ion-row>
+
+                <!--<ion-row class="keyboard-issue-row-height">
+                  <ion-col class="bottom-ctls" col-5 col-md-5>
+                    <!--<ion-icon class="clock-icon" ios="ios-time" md="md-time"></ion-icon><span class="date-and-time">&nbsp; {{currentDate | async | date:'H:mm'}}&nbsp;<span class="hours">hrs</span> &nbsp;&nbsp;&nbsp; {{currentDate | async | date:'dd MMM y'}}</span>
+                  </ion-col>
+
+                  <ion-col col-1 col-md-1 offset-md-2 class="shift-col-40">
+                    <button ion-button clear type="reset" class="reset-btn">RESET</button>
+                  </ion-col>
+
+                  <ion-col col-1 col-md-1 offset-md-1 class="shift-col-90">
+                    
+                  </ion-col>
+              </ion-row>-->
+                <ion-row class="last-row">
+                  <ion-col col-11 col-md-11 col-sm-11 class="btn-margin" >
+                      <div class="btn-outer">
+                       <img src="assets/icon/PDF_icon.svg"  class="export-btn" (click)="triggerPDF()">
+                        <img src="assets/icon/CSV_Icon.svg"  class="export-btn" (click)="triggerCSV()">
+                        <button class="save-btn"  ion-button [disabled]="(fluidForm.invalid) || !(fluidForm.dirty) || validationFlag" (click)='save()'>SAVE</button>
+                        <button ion-button clear type="reset" (click)="resetValidation()" [disabled]="isDisabled" class="reset-btn">RESET</button>
+                        </div>
+                    </ion-col>
+                </ion-row>
+
+              </ion-grid>
+              </form>
+            </div>
+          </div>
+        </ion-col>
+    </ion-row>
+</ion-grid>
